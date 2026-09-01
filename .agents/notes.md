@@ -1,10 +1,24 @@
-# Agent notes (scratch / carryover)
+# Agent notes (diary)
 
 **Home:** [hugo-agent-zero/hugo-agent-zero](https://github.com/hugo-agent-zero/hugo-agent-zero) (HQ). Imported from the local monorepo 2026-08-28. SOT copy may lag until the Cursor workspace switches.
 
-Use this file for anything that should survive the next chat but does not belong in root `AGENTS.md` (stable facts only). Cliff notes — session highlights without reading every repo, Issue, and PR.
+This file is a **diary**: one file, dated sittings, newest first. Not daily files. Not Issues.
 
-**Layout:** **Current status** (top) = living snapshot. **Meetings** (bottom) = session minutes, newest first.
+**Notes exist to:**
+
+- Show others the time + thoughts that went into the project
+- Remind us what we discussed
+- Give the next person context so they can pick up the project. Context matters
+
+Mention tickets in prose (`Open Issue #4 — Restore main tag + skip to main`). Do not use this file as the backlog. Issues stay the tickets; notes stay the story.
+
+Stable kit facts belong in root `AGENTS.md`.
+
+**Layout:**
+
+- **Now** (top) — a few live lines for agent cold start (next ticket, hard locks). Strike when superseded; do not rewrite the rest of the file to match.
+- **Focus** — historical snapshot. Leave it. New work goes in Meetings.
+- **Meetings** — the diary. `### YYYY-MM-DD — …`, newest first. Never rewrite or delete an old sitting. A one-line status on an old entry is OK.
 
 ## Assistant style (default)
 
@@ -20,21 +34,30 @@ Use this file for anything that should survive the next chat but does not belong
 
 ## Current status
 
+### Now
+
+- **Next:** Open Issue [#4](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/4) — Restore main tag + skip to main. Last launch-must kit ticket before shifting to HAZ.com content.
+- **Issue first:** HQ issue before coding. PR `Refs hugo-agent-zero/hugo-agent-zero#N`; issue gets the PR URL. Branch `feat/N-short-slug` when we remember. [#38](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/38). Agent opens PRs; Mark merges. Do not merge `main`.
+
 ### Focus
 
-- **HQ is live (2026-08-28):** [hugo-agent-zero/hugo-agent-zero](https://github.com/hugo-agent-zero/hugo-agent-zero) — Issues + README + this file. Not a Hugo module. Wiki off. Docs for humans → HAZ.com. Chat nickname **HQ**. Branch + PR for README/notes; agent does not merge `main`. Local clone: `C:\_au\work\hugo\dev\hugo-agent-zero-org\hugo-agent-zero`. Next: kit README signposts; Issues/Wiki/Discussions off on core / child / content.
-- **Still coding:** Overlay **light mode** (Mark saw issues). Field **white at rest / chrome on focus**. Parked chrome: `<main id="haz_main">` + skip-to-main (atom `main_wrapper_000` exists; multiplier `_home_main_000` parked — no `<main>` in HTML today). **Contact form = v2.** Parked: OG image; semver tags; PF CSS sibling product; `hugo-agent-zero-com` org.
-- ~~**Tomorrow (2026-08-28), first:** Overlay **light mode**… Then README one-by-one; Issues home; `hugo-agent-zero-com` org.~~ **HQ / Issues home started today.** Light mode + skip-to-main still open. GH Pages search/home URLs **fixed** (child pin core PR #14).
+- ~~**Tomorrow (2026-08-29):** Finish HQ **Issues** from notes (capture only — don’t execute the tickets). Then overlay light mode when coding resumes.~~ **2026-08-31:** executing tickets. Overlay look closed enough ([#7](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/7)/[#8](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/8)).
+- **HQ is live (2026-08-28):** [hugo-agent-zero/hugo-agent-zero](https://github.com/hugo-agent-zero/hugo-agent-zero) — Issues + signpost README + this file. Not a Hugo module. Wiki off. `main` ruleset: no force-push/delete, PRs required (0 reviews). Chat nickname **HQ**. **Git:** agent opens PRs; Mark reviews (at least) and merges. Agent does not merge `main`. Local clone: `C:\_au\work\hugo\dev\hugo-agent-zero-org\hugo-agent-zero`. `gh` 2.98.0, logged in as AlchemyUnited.
+- ~~**Issues started (not doing the work now):** [#2](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/2) kit READMEs → HQ; [#3](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/3) Issues/Wiki/Discussions off on non-HQ; [#4](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/4) `<main>` + skip-to-main (title tweak later); [#5](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/5) default OG image. CF analytics issue not filed (Starbucks/`gh` timeouts). Keep filing one-by-one.~~ **2026-08-31:** #2/#3/#5 done; Open Issue #4 still open.
+- ~~**Still coding:** Overlay **light mode** (Mark saw issues). Field **white at rest / chrome on focus**. Parked chrome: `<main id="haz_main">` + skip-to-main (atom `main_wrapper_000` exists; multiplier `_home_main_000` parked — no `<main>` in HTML today). **Contact form = v2.** Parked: OG image; semver tags; PF CSS sibling product; `hugo-agent-zero-com` org.~~ **2026-08-31:** Overlay look [#7](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/7)/[#8](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/8) closed. Open Issue #4 for `<main>` + skip. Card vs chip fill parked. Parked: semver tags; PF CSS sibling (`haz_pf.css`); `hugo-agent-zero-com` org; pink→lime / Godzilla.
+- **Contact / list (locked enough):** Hugo has no POST. **Worker** = old WP AJAX. Spam: CF bot fight ± **Turnstile**; CleanTalk optional. **One people vendor = HubSpot** (free CRM + Forms API + small branded blasts). No second ESP. Beehiiv = paid bespoke adapter later. **HAZ.com Contact** = LinkedIn Page Message (bespoke/paid); **HQ Issues** = kit. **DBC:** real contact form + maybe HS newsletter; **Substack = presence/social**, not the email channel; **no iframes**.
+- **Responsive images (locked, not built):** Sibling shortcode (not `haz key=`). Page-bundle stem + `-sm`/`-md`/`-lg`/`-xl` if present. Settings table for widths + **`sizes` is the contract**; srcset is the menu. No `<picture>` now (art direction = later issue).
+- ~~**Tomorrow (2026-08-28), first:** Overlay **light mode**… Then README one-by-one; Issues home; `hugo-agent-zero-com` org.~~ **HQ / Issues home started 2026-08-28.** Overlay look closed 2026-08-31. Skip-to-main still Open Issue [#4](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/4). GH Pages search/home URLs **fixed** (child pin core PR #14).
 - **EOD 2026-08-27:** Search overlay Refine ~99% **dark mode**. Core PR #10 merged (`76b8ef9`); child pin + Pages. Parked: pink→lime / Godzilla; PF CSS as sibling repo; bookkeeping below.
 - ~~**Paused (2026-08-27, afternoon):** Search overlay polish — Mark doing a full review later. **Open:** chip type is still Pagefind’s size, not the site default (hosts inherit; chips don’t). Card/chip background still parked (inspector). Core `main` `094beeb` (PR #4); child pointed at that (PR after). Live via content **pages** workflow.~~ **Superseded same day** — overlay polish ran through core PRs #5–#9 (`1fb3311`); live via content **pages**. Chip type inherit mostly landed; card vs chip fill still parked.
-- ~~**After search is complete — bookkeeping:** (1) Notes home — 4th repo.~~ **HQ created 2026-08-28.** Still parked: (2) **Kit org vs HAZ.com org** — `hugo-agent-zero` = product; separate org for site forks, name like `hugo-agent-zero-com` (not `---`). (3) **Universal modal JS** — generic open (selector + `haz_state__*`); hamburger stays a panel. Also parked DRY: `inner` → `content`; `fn_tag_script`.
+- ~~**After search is complete — bookkeeping:** (1) Notes home — 4th repo.~~ **HQ created 2026-08-28.** ~~(3) **Universal modal JS** — generic open (selector + `haz_state__*`); hamburger stays a panel. Also parked DRY: `inner` → `content`; `fn_tag_script`.~~ **2026-08-31:** toggle vs modal landed; `inner` → `content`. Still parked: (2) **Kit org vs HAZ.com org** — `hugo-agent-zero` = product; separate org for site forks, name like `hugo-agent-zero-com` (not `---`). `fn_tag_script` with enqueue [#34](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/34).
 - **Holy grail (2026-08-18):** GitHub Hugo modules + Pages **passed**. Public core / child / content + Pages = **kit shipped** (quiet alpha). SOT monolith stays local (no remote; don’t edit unless asked). Org clones: `C:\_au\work\hugo\dev\hugo-agent-zero-org\`.
 - **Pagefind overlay shipped (2026-08-26).** Kit search is Pagefind 1.5.x Component UI, local assets, not CDN / hugomods. Overlay = HAZ `<dialog>` + `<pagefind-input>` + `<pagefind-results>` (not `<pagefind-searchbox>` / not their modal-trigger). Off = graph only (header search **and** `block_main_pre.search`). **`settings.search.pagefind` deleted.** Filters = next after overlay polish. Core PR #1 merged (`fcd3cd4`); child pinned + merged. Live: https://hugo-agent-zero.github.io/hugoagentzero_com-content/ — content Pages dispatch still needed after child merge (content has no rebuild on child merge).
 - **Pagefind is kit search (locked 2026-08-20).** Not a `go.mod`; post-`hugo` indexer (`npx pagefind@1.5.2 --site public`). JS/CSS **local** (`public/pagefind/`, `relURL`). Index hook: `data-pagefind-body` on page/blog `<article>`.
 - ~~**Next coding — Pagefind chrome:** POC works; layout/aesthetics next after Mark skims Pagefind modal+trigger docs.~~ **Done 2026-08-26** — HAZ dialog + header icon `showModal`; not Pagefind’s modal-trigger.
-- ~~**Pagefind composition (do this when we restyle):** today’s `search_pagefind_000` is a blob…~~ **Done 2026-08-26** — blob deleted; folder atoms + organism `search_pagefind_modal_000`; named slots (`close_icon`, `inner`); multiply in sysMan. Parked DRY: rename `inner` → `content`; generic open JS; `fn_tag_script`.
-- **Parked (still):** overwrite core `static/defaults/meta_tag_default_image.png` (1200×630, **same name**), push core, pin child, Pages.
-- **Launch bar:** Search **POC unblocked**. **Contact form is kit** — we’ll pick a backend *we* like, then integrate (same arc as Pagefind). Mailto/social is not the n00b story. Vendor TBD; Hugo won’t POST for us. Other Atomics come from dogfood. Then HAZ.com content + READMEs.
+- ~~**Pagefind composition (do this when we restyle):** today’s `search_pagefind_000` is a blob…~~ **Done 2026-08-26** — blob deleted; folder atoms + organism `search_pagefind_modal_000`; named slots (`close_icon`, `inner`); multiply in sysMan. ~~Parked DRY: rename `inner` → `content`; generic open JS; `fn_tag_script`.~~ **DRY 2026-08-31** — `content` slot; generic toggler + modal. `fn_tag_script` still enqueue.
+- ~~**Parked (still):** overwrite core `static/defaults/meta_tag_default_image.png` (1200×630, **same name**), push core, pin child, Pages.~~ **Done 2026-08-31** — HQ [#5](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/5).
+- ~~**Launch bar:** Contact form is kit — vendor TBD.~~ **Updated 2026-08-28:** HS = people vendor; Worker + Turnstile; HAZ.com ≠ a form (LinkedIn + HQ Issues). DBC dogfoods the form.
 - ~~**Launch bar:** Search POC unblocked. Email / social @ for contact is enough (form later, nicer on CF).~~
 - ~~**EOD 2026-08-19:** Sit. First thing next: OG default image, **then** search spike.~~ Search went first. Workflow: **dev local, ship when tested** — but this sitting, module pins mean **push to GH to see it live**.
 - ~~**Launch bar:** **Search is the blocker.**~~
@@ -277,7 +300,51 @@ Use this file for anything that should survive the next chat but does not belong
 
 ## Meetings
 
+### 2026-09-01 — Notes are a diary
+
+**Locked:** One file, dated sittings, newest first. Not daily files. Not Issues. Notes show the time + thoughts that went into the project, remind us what we discussed, and give the next person context. Mention tickets in prose (`Open Issue #4 — Restore main tag + skip to main`). Do not use notes as the backlog.
+
+**Write:** Append a `### YYYY-MM-DD` heading per sitting. Never rewrite or delete an old meeting. Strike a **Now** / Focus line when superseded; do not remove. Wrap-up = new diary entry only. Agent cold start = newest meeting + **Now**.
+
+**This PR:** Restore the original 2026-08-28 import meeting (it had been rewritten). Keep the later 2026-08-28 EOD sitting. Restore truncated Focus lines in full, then strike + status.
+
+### 2026-08-31 — HQ execute; search DRY; launch musts; /pages/; pause on #4
+
+**Next:** [#4](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/4) `<main>` + skip. Mark out (errands). Confirm live `/pages/` is 404, then close [#37](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/37).
+
+**Process:** HQ Issues as shared brain. Issue **before** code ([#38](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/38)): PR `Refs hugo-agent-zero/hugo-agent-zero#N`; issue gets PR URL; branch `feat/N-short-slug` when we remember. Agent PRs; Mark merges. Do not merge `main`. Don’t dual-write SOT unless asked. PRs live on the repo you changed — HQ open-PR filter empty after merge is expected.
+
+**Search DRY ([#11](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/11) closed):** Toggle (`classList` on `html`) and modal (`showModal`) are **not** one script — more different than the same. Menu uses toggler; search uses modal. Overlay look [#7](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/7)/[#8](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/8) closed (recheck on pink→lime [#12](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/12)). Slot `inner` → `content`. Scripts instance once under `body_end_scripts`; sysMan `enabled` is the include switch (no settings flag; enqueue stays parked). Old hamburger/search JS parked then dropped from child sysMan; delete files later [#36](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/36). `fn_tag_script` stays with [#34](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/34). Don’t put `data-haz_toggler` on search.
+
+**Launch musts:** #2 READMEs → HQ **done**. #3 Issues/Wiki/Projects off on core, child, `hugoagentzero_com-content` **done** (leftover public `hugo-agent-zero-child-content` not changed). #5 OG image **done** (core PR #20, child pin #20, Pages; cache-bust if old art sticks). #4 not started. [#21](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/21)/[#22](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/22) = writing HAZ.com, not kit homework. Contact form / LinkedIn contact / filters / lime / CF / semver / enqueue / library / Pages auto-rebuild [#23](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/23) are not launch blockers.
+
+**`/pages/`:** Folder is organization only — don’t emit a public section index ([#37](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/37); content PR #2 merged, `_build.render: never`). Children still publish. Don’t hide from Pagefind only.
+
+**Git:** Core/child clones often have local dirt (pagefind, LICENSE CRLF). PRs add only intended files. Don’t `go mod tidy` on child. Pin with `go get github.com/hugo-agent-zero/hugo-agent-zero-core@<sha>`. Content Pages: **new** `workflow_dispatch`, not re-run.
+
+### 2026-08-28 (later) — HQ live; Issues started; forms/images locked; EOD
+
+_Same-day EOD sitting. The earlier import meeting is the next heading (was rewritten in an unmerged notes commit; restored 2026-09-01)._
+
+**Shipped:** GitHub CLI 2.98.0 (AlchemyUnited, SSH). Child pin core PR **#14** — live logo + Pagefind hits share one `/hugoagentzero_com-content/`. HQ repo created (public, Issues on, Wiki off). Notes imported ([PR #1](https://github.com/hugo-agent-zero/hugo-agent-zero/pull/1) — agent squash-merged; Mark said don’t merge again). `main` ruleset: no force-push/delete, require PR. Local HQ: `hugo-agent-zero-org/hugo-agent-zero`.
+
+**Git (re-locked):** Agent opens PRs. Mark reviews (the skim gate) and merges. Do not merge `main`.
+
+**Issues filed (capture only):** [#2](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/2) READMEs → HQ; [#3](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/3) kit Issues/Wiki/Discussions off; [#4](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/4) `<main>` + skip (title touch-up later); [#5](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/5) OG default image. Continue the pile tomorrow. No “inbox milestone.”
+
+**Locked — HQ:** Kit ≠ company. Human docs → HAZ.com, not Wiki. Notes = cliff notes (not Issues). Don’t dual-write SOT.
+
+**Locked — forms / lists:** Worker replaces WP AJAX. CF bot fight ± Turnstile; CleanTalk optional. **HubSpot only** for people (CRM, contact, small newsletter). Beehiiv = paid extra adapter. HAZ.com Contact = LinkedIn Page Message (bespoke/pay). HQ Issues = kit. DBC: real contact + maybe HS list; Substack = social/presence, not the email channel; no iframes.
+
+**Locked — images (not built):** Sibling shortcode; page resources; stem + optional `-sm`…`-xl`; **`sizes` is the magic**; srcset from files that exist. `<picture>` later, not a priority.
+
+**Chrome:** Still no HTML `<main>` (`_home_main_000` parked). Overlay light mode still open.
+
+**Next:** Finish HQ Issues from notes. Push this notes branch. Don’t start executing tickets until the inbox is the record. Overlay light mode when coding.
+
 ### 2026-08-28 — GH CLI; Pages URLs; HQ repo; notes move here
+
+_Status: notes import merged as PR #1. Same-day EOD sitting is the heading above. Open Issue #4 still covers `<main>` + skip._
 
 **Shipped:** GitHub CLI 2.98.0 (`gh auth login` as AlchemyUnited). Child pin core PR **#14** landed — live logo and Pagefind result URLs share one `/hugoagentzero_com-content/` prefix. HQ: [hugo-agent-zero/hugo-agent-zero](https://github.com/hugo-agent-zero/hugo-agent-zero) (public, Issues on, Wiki off). This notes file imported from the local monorepo onto a PR.
 
