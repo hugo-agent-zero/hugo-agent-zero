@@ -10,11 +10,11 @@ Follow **Assistant style (default)** in [.agents/notes.md](.agents/notes.md).
 
 ## Session carryover
 
-[.agents/notes.md](.agents/notes.md) is the cliff notes: **Current status** (snapshot) + **Meetings** (session minutes, newest first). Issues and PRs are the work record; notes are the overlay so you do not reconstruct the day from the forge.
+[.agents/notes.md](.agents/notes.md) is the project **diary**: one file, dated sittings, newest first. Not Issues. Issues and PRs are the tickets; notes are the story (time + thoughts, what we discussed, context for the next person). Mention tickets in prose.
 
-**Start of session:** Read **Current status**; skim the latest **Meeting** if needed. One-line focus ack when relevant.
+**Start of session:** Read the **newest Meeting** and **Now** if present. One-line focus ack when relevant. Do not rewrite old sittings.
 
-**Wrap-up:** On **wrap up** / **meeting notes** / **end session** → update notes on a **branch** and open a **PR**. Do not push straight to `main`. Mark skims; the agent does not merge `main`.
+**Wrap-up:** On **wrap up** / **meeting notes** / **end session** → append a dated Meeting on a **branch** and open a **PR**. Strike a **Now** line if it changed. Do not rewrite Focus or prior sittings. Do not push straight to `main`. Mark skims; the agent does not merge `main`.
 
 Implicit session end (good night, done for today, etc.): ask once whether to update notes; only then.
 
