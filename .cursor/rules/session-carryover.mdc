@@ -1,0 +1,16 @@
+---
+description: Read .agents/notes.md at session start; append a diary entry on wrap-up
+alwaysApply: true
+---
+
+# Session carryover
+
+See **Session carryover** in [AGENTS.md](../../AGENTS.md) and [.agents/notes.md](../../.agents/notes.md). Notes are a **diary** (one file, dated sittings). HQ is home; SOT may lag.
+
+**Start of session:** On a **new chat** or when continuing prior work, read `.agents/notes.md` — the **newest Meeting** and **Now** if present. One-line focus ack when relevant; no recap dump. Do not re-read every turn in the same thread.
+
+If a new session looks likely and **Meetings** is stale vs recent work, ask once: *I sense we're about to start a new session, but we never updated `.agents/notes.md` from the last session — would you like me to do the last session now?* Backfill a dated entry only if yes. Do not rewrite Focus or old meetings.
+
+**Wrap-up:** On **wrap up** / **meeting notes** / **end session** → append a dated Meeting (newest first). Strike a **Now** line if it changed. Do not rewrite Focus or prior sittings. If Plan mode was used, **archive plans** per **Plans (project archive)** in [AGENTS.md](../../AGENTS.md): copy to `.agents/plans/`, update traceability frontmatter (`hq_issue`, PR URLs, `status`), add **Plans:** bullets in the Meeting entry.
+
+If language suggests the session is ending (good night, done for today, pick up tomorrow, etc.) without an explicit notes request, ask once: *Do you want me to update `.agents/notes.md`?* Update only if yes. Do not append minutes on every reply.
