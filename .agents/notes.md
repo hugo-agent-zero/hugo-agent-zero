@@ -36,9 +36,14 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ### Now
 
-- **Next sitting:** Pre-#21 in order — (1) [#26](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/26) light meta-debugger smoke on live (home + blog single + one page; Meta/X/LinkedIn; fix **global** head_tags only), (2) Pico **fuchsia** (close [#12](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/12), new issue; vendor in core + child `1_main`), (3) [#21](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/21) HAZ.com content — **blog = FAQ/How To** (additive posts, e.g. swap Pico theme, change font; GH UI upload path for child-only tweaks).
+- **Next sitting:** Start **HAZ.com content** (long arc). Write first; break into kit tickets as the site needs them — other issues get done *and* the site takes form.
+- **Parked (simmer):** [#19](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/19) versioning + GH HX — [plans/core_semver_tags_daff550c.plan.md](plans/core_semver_tags_daff550c.plan.md).
+- **Also queued:** Pre-#21 — [#26](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/26) meta smoke, fuchsia, [#21](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/21) vanilla starter gate (site content is the jump-in, not homework first).
 - **Launch musts:** all done ([#4](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/4) closed 2026-09-01).
 - **Issue first / PR workflow** locked; Mark merges; do not merge `main`.
+- **Pages:** after child CSS/module merges, kick a **new** dispatch (re-run keeps the original content SHA).
+- ~~**Next sitting:** Finish [#43] Phase 2… `params.short_desc`…~~ Superseded 2026-09-03 — #43 list + desc meta shipped; HAZ.com content is the jump-in.
+- ~~**Next sitting:** Pre-#21 in order — (1) [#26]… (2) fuchsia… (3) [#21]…~~ Superseded 2026-09-02 EOD / 2026-09-03 — #43 then HAZ.com content.
 
 ### Focus
 
@@ -299,6 +304,47 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 ---
 
 ## Meetings
+
+### 2026-09-03 — #43 Phase 2–3 + meta columns shipped; next = HAZ.com content
+
+**#43 Phase 2 (shipped):** List row = `li>article` + heading via `props.tag` (blog **h2**) + `content` child. Core [PR #23](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/23); child [PR #29](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/29); pin [PR #30](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/30).
+
+**#43 Phase 3 (shipped):** `params.desc_short` / `params.desc_long` (never Hugo `.Summary`). Labels from `settings.desc` — **Summary** / **Overview**. List = short only; single = long else short. Core atom `hugo_page_desc_dt_dd_000`. Core [PR #24](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/24); child [PR #31](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/31); content [PR #3](https://github.com/hugo-agent-zero/hugoagentzero_com-content/pull/3); pins [PR #32](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/32) / [PR #33](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/33).
+
+**Meta polish (shipped):** Summary grouped with Cats/Tags; article list unstyled. Child [PR #34](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/34) (restore child-only Pico override rules after a full-file copy oops). **dt/dd columns:** grid `5.5rem` + `minmax(0,1fr)`, `1rem` gap — not a width calc. Child [PR #35](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/35). Mark: `/blog/` looks ~10× better.
+
+**Pages quirk:** content workflow `hugo mod get` content at **dispatch SHA**. Re-running an old run keeps that SHA; always a **new** Pages dispatch after child/content land.
+
+**Next sitting:** HAZ.com content. Long job. Start writing; peel off code tickets when the site needs them — kit issues move *and* the site takes form.
+
+**Plans:**
+- [Blog list / #43](plans/blog_list_main_styling_bafcd32b.plan.md) — Phases 1–3 + meta columns; **shipped**
+
+### 2026-09-02 (afternoon) — #43 Phase 1 shipped; Phase 2 + short_desc planned
+
+*Status 2026-09-03:* Phase 2 + `desc_short`/`desc_long` + meta columns shipped — see Meeting that date.
+
+**#43 Phase 1 (shipped):** Blog index in `<section class="haz_section--blog">`. Pico article card styles on `main` (leave nested article/section alone). Core [PR #22](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/22), child [PR #26](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/26), pin [PR #27](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/27); Pages OK. Content pin hygiene [PR #28](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/28).
+
+**#43 Phase 2 (next jump-in):** Graduate POC list row — `li>article`; title `props.tag: h2`; **reuse** `single_blog_meta_wrapper` (dl/dt/dd); drop handmade Categories/Tags. One launch Atomic; variants later.
+
+**`params.short_desc` (follow-on):** Never Hugo `.Summary` (auto-fallback blocker). Put in meta box as Summary/Overview via settings `term`. Optional h2/h3 later.
+
+**Plans:**
+- [Blog list / #43](plans/blog_list_main_styling_bafcd32b.plan.md) — Phase 1 shipped; Phase 2 + short_desc; later **shipped** 2026-09-03
+
+### 2026-09-02 — Plans archive shipped; #19 versioning parked (HX)
+
+**HQ:** [PR #42](https://github.com/hugo-agent-zero/hugo-agent-zero/pull/42) merged — `.agents/plans/` archive, `AGENTS.md` Plans section, session-carryover rule, backfilled #40/#41 plans + **Plans:** on 2026-09-01 Meeting.
+
+**#19 versioning (discussed, not executed):** Go has no npm-style ranges. HX goal = no pin babysitting. Locked direction: core branch **`v1.x.x`** = latest compatible 1.x (`hugo mod get …@v1.x.x`); tags (`v1.0.0`, `v1.2.3`) for lock-in; **`v2.x.x`** only when something breaks. Same rule for live Pages and site copies (true dogfood). Child pin PRs after every core merge go away once CI/child use `@v1.x.x`.
+
+**Site start story:** kit org keeps core; site org (e.g. haz-com) owns **child + content copies only** — do **not** copy core. Prefer GitHub **templates**, not forks (forks imply PRs back; we won’t take those). Today: content starter is a template; **child is not**. Template flag ≠ “Start here.”
+
+**Sandbox vs starter:** child/content have been a **dev sandbox**. Public “Start here” waits on intentional **vanilla demo** cleanup (Lorem, thin menus) — separate from HAZ.com product content [#21](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/21). Cleanup sucks time but needed.
+
+**Plans:**
+- [Versioning + GitHub HX](plans/core_semver_tags_daff550c.plan.md) — HQ [#19](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/19); parked
 
 ### 2026-09-01 — #4 shipped; debt tidy; pre-#21 queue
 
