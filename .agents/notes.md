@@ -36,14 +36,15 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ### Now
 
-- **Tomorrow first:** Social icon SVG / chrome **fills** still wrong (same family as search-btn fill fixes) — mop before or beside `#13`.
-- **Bigger picture:** Prioritize **HAZ** so it can be shown to a friend / colleague — **showable alpha**, not perfect.
-- **Next (after mop / when ready):** [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) `haz_img` (plan designed 2026-09-14; **sleep on it**, then build) + [#49](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/49) demo content.
-- **Parked (simmer):** [#19](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/19) versioning + GH HX — [plans/core_semver_tags_daff550c.plan.md](plans/core_semver_tags_daff550c.plan.md).
-- **Also queued:** Pre-#21 — [#26](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/26) meta smoke, fuchsia, [#21](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/21) vanilla starter gate (site content is the jump-in, not homework first).
-- **Launch musts:** all done ([#4](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/4) closed 2026-09-01).
+- **Next (tomorrow):** Resume [#51](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/51) **methodically** — repos restored to pre-2026-09-15 footing after a messy first try. Prefer updating the **existing** child fluid clamp (or a clear core plan) — **no** SOT monolith edits; **no** random workflow/pin thrash.
+- **Hard lock (2026-09-15):** Day-to-day = **org modules + Pages** only. Do not edit SOT for kit work unless Mark asks.
+- **#13 paused:** [`haz_img`](plans/haz_img_shortcode_4d1f620b.plan.md) waits until measure/type shoulders (#51) are settled.
+- **Bigger picture:** Prioritize **HAZ** showable alpha.
+- **Also queued:** Social SVG chrome fills; [#49](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/49) after `#13`; [#19](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/19) simmer; pre-#21 meta/fuchsia/starter.
 - **Issue first / PR workflow** locked; Mark merges; do not merge `main`.
-- **Pages:** after child CSS/module merges, kick a **new** dispatch (re-run keeps the original content SHA).
+- **Pages:** after child/core merges, kick a **new** dispatch (re-run keeps old content SHA). Only `v1.0.0` core tag (deleted `v1.0.1`).
+- ~~**Tomorrow first:** Social icon SVG… then `#13`…~~ Superseded 2026-09-15 — `#51` first; `#13` paused; restore day.
+- ~~**Next (after mop / when ready):** [#13]… + [#49]…~~ Superseded 2026-09-15 — `#13` blocked on `#51`.
 - ~~**Next sitting (weekend-friendly):** [#13]… + [#49]…~~ Superseded 2026-09-14 — `#13` plan ready (sleep); social SVG fills first tomorrow.
 - ~~**Next sitting:** Start **HAZ.com content** (long arc)…~~ Superseded 2026-09-11 — showable alpha via #13 + #49 first; HAZ.com content still the long arc.
 - ~~**Next sitting:** Finish [#43] Phase 2… `params.short_desc`…~~ Superseded 2026-09-03 — #43 list + desc meta shipped; HAZ.com content is the jump-in.
@@ -308,6 +309,21 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 ---
 
 ## Meetings
+
+### 2026-09-15 — #51 measure/type attempt; restore day; #13 paused
+
+**Sequence lock:** [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) `haz_img` **paused** until [#51](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/51) (measure as constant → type follows) is settled. Net-new shortcode waits; open type/measure hole first. Parked media-library idea as [#52](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/52) (v3-ish; Mom Test fail as default).
+
+**Design (good):** 65ch = HAZ sweet spot. Fluid root: `clamp(100%, val(delta), max(delta))` with delta from measure vs sweet; min never below browser base. `wrapper_*` on `haz_img` for later galleries (plan updated; not built). Work **modules + Pages only** — not SOT monolith.
+
+**Execution (bad — lesson):** First try thrashed child spike → core move → tags/pins/Pages `@v1.x.x` downgrade → unclear Pico vs HAZ cascade. Too many moving parts for “update the fluid clamp.” Mark: be **10× more methodical**; don’t put a core concern in child then chase workflow.
+
+**EOD restore:** Revert PRs merged (or ready) to pre-2026-09-15 footing — core / child / content. Deleted core tag **`v1.0.1`** (only **`v1.0.0`** left). Live fluid type again = child `pico-override` old clamp `100% / 0.9rem+0.35vw / 112.5%`.
+
+**Tomorrow:** Plan `#51` retry calmly on stable ground. Then `#13` when shoulders exist.
+
+**Plans:**
+- [haz_img shortcode](plans/haz_img_shortcode_4d1f620b.plan.md) — HQ [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13); status **paused** (depends on [#51](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/51))
 
 ### 2026-09-14 — haz_img (#13) plan designed; sleep on it; social SVG fills tomorrow
 
