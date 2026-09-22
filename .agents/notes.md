@@ -36,7 +36,10 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ### Now
 
-- **Next (haz_img pass 2):** Inner wrapper markup in shortcode `.Inner`; eyes-on [`haz_img.html`](https://github.com/hugo-agent-zero/hugo-agent-zero-core/blob/main/layouts/shortcodes/haz_img.html); mobile-first key wording (`M_D`); retest. Open [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) follow-through / close when pass 2 done.
+- **Next (morning):** Eyes-on review of [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) (`haz_img` shortcode), then close if OK; Freeq.
+- ~~**Next:** Close [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) if eyes-on OK; Freeq.~~ Superseded 2026-09-22 night — paused for a morning review with fresh eyes.
+- ~~**Next:** Workspace = **`hugo-agent-zero-org`** … Park sibling original + monorepo under `dev/archive` when ready.~~ Superseded 2026-09-22 — reorg done. Parent `C:\_au\work\haz\dev`. HQ + thin `AGENTS.md` at org root; ship repos under `project-modules/`; archive at `haz/dev/archive`.
+- ~~**Next (haz_img pass 2):** …~~ Superseded 2026-09-22 — m/t/d rethink shipped (#40/#67/#20 + `v1.x.x` FF); live demo OK.
 - **Also:** v2+ module extract [#59](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/59). Eyes-on / close [#57](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/57). Queued: [#55](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/55)/[#56](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/56); blog How To [#54](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/54). Optional freeze tag `v1.1.0` still open.
 - ~~**Next:** Merge [#19]… child [#62]… content [#9]…~~ Superseded 2026-09-18 — #19 dogfood + #13 haz_img v1 shipped; day-to-day still FF **`v1.x.x`** after core → `main`.
 - ~~**Also:** … [#51]… before unpausing [#13]…~~ Superseded 2026-09-18 — #51 closed earlier; #13 unpaused and dogfood live.
@@ -316,6 +319,26 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 ---
 
 ## Meetings
+
+### 2026-09-22 (night) — reorg confirmed; #13 eyes-on paused
+
+- Folder reorg is **done**: parent `C:\_au\work\haz\dev` (was `work/hugo/dev`). HQ + thin `AGENTS.md` at the org root; ship repos under `project-modules/`; parked original + monorepo at `haz/dev/archive`. Thin org `AGENTS.md` updated to match.
+- [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) is the `haz_img` shortcode (still open). Eyes-on close **paused until morning** — fresh review, then close if OK. Freeq after that.
+
+### 2026-09-22 (evening) — haz_img live + workspace cutover
+
+- Live demo-post-1 had `haz_img` but **zero output**: content/child already on m/t/d; Pages still pulled core `@v1.x.x` at #38 (preset SC). Fail-closed (comment gone after minify).
+- Shipped: Mark merged core [#40](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/40), child [#67](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/67), content [#20](https://github.com/hugo-agent-zero/hugoagentzero_com-content/pull/20); **FF `v1.x.x` → main**; Pages redispatched — three imgs + srcset/`haz_img_w_*` live.
+- Knobs live in child `settings.images.config` — **not** a separate `images.yaml`.
+- `{{< haz key="blog" >}}` aside = FPO shortcode-route dogfood, not `haz_img`.
+- **Workspace:** day-to-day = **`hugo-agent-zero-org`**; HQ brain = this repo; thin org-root `AGENTS.md` pointer. `child-content` = template; `hugoagentzero_com-content` = dogfood/Pages. Mark parking sibling original + monorepo under `dev/archive`. **Done same day** — parent `work/haz/dev`; modules in `project-modules/`; archive at `haz/dev/archive`.
+
+### 2026-09-22 (afternoon) — haz_img band-relative m/t/d rethink + spin
+
+- Agreed: m/t/d % are of **tier band max** (not always measure). Binary m/d hid it → ship tablet now.
+- Language: **`min_tablet` / `min_desktop`**; **`content_inset`**; derive xs/sm/md/lg from usable bands.
+- Closed unmerged: core #39, child #66, content #19. Opened then merged: core [#40](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/40), child [#67](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/67), content [#20](https://github.com/hugo-agent-zero/hugoagentzero_com-content/pull/20).
+- Skill: `.cursor/skills/haz-img-exports`. Align still [#62](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/62).
 
 ### 2026-09-18 — #13 haz_img v1 dogfood; DevTools DPR scare; pass 2 parked
 
