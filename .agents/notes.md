@@ -327,6 +327,7 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 - **Image widths:** Mark corrected the gutter/margin tweak. Do not keep subtracting `content_inset` (1rem × 2) so variants match the padded hole. Size to the band; files a bit larger than the window is fine. That ~1rem does not hurt.
 - **Morning:** full top-to-bottom of #13, including new demo images exported from that formula at the new widths (not a code-only skim).
 - **Ladder documented** in [`.cursor/skills/haz-img-exports/SKILL.md`](../.cursor/skills/haz-img-exports/SKILL.md): xs = ½ mobile max, sm = mobile max, md = tablet max, lg = full width, xl = 1.5×lg, xxl = 2×lg. No `content_inset` subtract. Dogfood px: 194 / 388 / 620 / 775 / 1163 / 1550.
+- **Morning revisit:** full-width px is `--haz_measure_type` (`65ch`) converted to px for image dimensions (DevTools). Reconcile that with `--haz_measure` / `45rem` / `content_width_px: 775` then — do not treat `ch` and the image spine as unrelated.
 
 ### 2026-09-22 (evening) — haz_img live + workspace cutover
 

@@ -12,6 +12,8 @@ When exporting Affinity/Photoshop (or similar) sizes for `haz_img` page-bundle f
 
 Size to the **band**. Do not subtract `content_inset`. Files run about 1rem larger than the padded hole; that overshoot is accepted.
 
+Full-width px is `--haz_measure_type` (`65ch` in the child override) converted to px for image files. `content_width_px: 775` is that DevTools reading. Morning pass reconciles it with `--haz_measure` (`45rem`). Do not treat the `ch` spine and the image widths as unrelated.
+
 ## Knobs
 
 From `layouts/_partials/child/data/system_manifest/settings.yaml` → `settings.images.config`:
