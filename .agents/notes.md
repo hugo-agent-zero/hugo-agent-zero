@@ -36,7 +36,7 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ### Now
 
-- **Next (morning):** Eyes-on review of [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) (`haz_img` shortcode), then close if OK; Freeq. Locked tonight: stop tweaking gutters for image widths — size to the band and accept files ~1rem larger than the padded hole (`content_inset` subtraction is the thing to drop).
+- **Next (morning):** Full top-to-bottom review of [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) (`haz_img`), then close if OK; Freeq. Includes regenerating demo images with the band formula (xs–xxl from `min_tablet` / `min_desktop` × measure) at the new widths. Locked tonight: stop tweaking gutters — size to the band and accept files ~1rem larger than the padded hole (drop `content_inset` subtraction).
 - ~~**Next:** Close [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) if eyes-on OK; Freeq.~~ Superseded 2026-09-22 night — paused for a morning review with fresh eyes.
 - ~~**Next:** Workspace = **`hugo-agent-zero-org`** … Park sibling original + monorepo under `dev/archive` when ready.~~ Superseded 2026-09-22 — reorg done. Parent `C:\_au\work\haz\dev`. HQ + thin `AGENTS.md` at org root; ship repos under `project-modules/`; archive at `haz/dev/archive`.
 - ~~**Next (haz_img pass 2):** …~~ Superseded 2026-09-22 — m/t/d rethink shipped (#40/#67/#20 + `v1.x.x` FF); live demo OK.
@@ -325,6 +325,7 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 - Folder reorg is **done**: parent `C:\_au\work\haz\dev` (was `work/hugo/dev`). HQ + thin `AGENTS.md` at the org root; ship repos under `project-modules/`; parked original + monorepo at `haz/dev/archive`. Thin org `AGENTS.md` updated to match.
 - [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) is the `haz_img` shortcode (still open). Eyes-on close **paused until morning** — fresh review, then close if OK. Freeq after that.
 - **Image widths:** Mark corrected the gutter/margin tweak. Do not keep subtracting `content_inset` (1rem × 2) so variants match the padded hole. Size to the band; files a bit larger than the window is fine. That ~1rem does not hurt.
+- **Morning:** full top-to-bottom of #13, including new demo images exported from that formula at the new widths (not a code-only skim).
 
 ### 2026-09-22 (evening) — haz_img live + workspace cutover
 
