@@ -36,14 +36,26 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ### Now
 
-- **Tomorrow first:** Social icon SVG / chrome **fills** still wrong (same family as search-btn fill fixes) — mop before or beside `#13`.
-- **Bigger picture:** Prioritize **HAZ** so it can be shown to a friend / colleague — **showable alpha**, not perfect.
-- **Next (after mop / when ready):** [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) `haz_img` (plan designed 2026-09-14; **sleep on it**, then build) + [#49](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/49) demo content.
-- **Parked (simmer):** [#19](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/19) versioning + GH HX — [plans/core_semver_tags_daff550c.plan.md](plans/core_semver_tags_daff550c.plan.md).
-- **Also queued:** Pre-#21 — [#26](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/26) meta smoke, fuchsia, [#21](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/21) vanilla starter gate (site content is the jump-in, not homework first).
-- **Launch musts:** all done ([#4](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/4) closed 2026-09-01).
+- **Next:** Merge [#63](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/63) PRs (staging-content rename + child import + HQ README). Then #13 eyes-on. Website org / `project-website/` after that.
+- ~~**Next (morning):** Full top-to-bottom review of [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) (`haz_img`)…~~ Superseded 2026-09-23 — kit vs HAZ.com split first; content repo renamed to `hugo-agent-zero-env-staging-content`.
+- ~~**Next:** Close [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) if eyes-on OK; Freeq.~~ Superseded 2026-09-22 night — paused for a morning review with fresh eyes.
+- ~~**Next:** Workspace = **`hugo-agent-zero-org`** … Park sibling original + monorepo under `dev/archive` when ready.~~ Superseded 2026-09-22 — reorg done. Parent `C:\_au\work\haz\dev`. HQ + thin `AGENTS.md` at org root; ship repos under `project-modules/`; archive at `haz/dev/archive`.
+- ~~**Next (haz_img pass 2):** …~~ Superseded 2026-09-22 — m/t/d rethink shipped (#40/#67/#20 + `v1.x.x` FF); live demo OK.
+- **Also:** v2+ module extract [#59](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/59). Eyes-on / close [#57](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/57). Queued: [#55](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/55)/[#56](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/56); blog How To [#54](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/54). Optional freeze tag `v1.1.0` still open.
+- ~~**Next:** Merge [#19]… child [#62]… content [#9]…~~ Superseded 2026-09-18 — #19 dogfood + #13 haz_img v1 shipped; day-to-day still FF **`v1.x.x`** after core → `main`.
+- ~~**Also:** … [#51]… before unpausing [#13]…~~ Superseded 2026-09-18 — #51 closed earlier; #13 unpaused and dogfood live.
+- ~~**Next (tomorrow first):** Revive [#19]… `@v1.x.x`…~~ Superseded 2026-09-18 — dogfood PRs open; core `v1.x.x` == `main` (`4595709`).
+- ~~**Next (when back):** Figure next steps. Open mop tickets: [#55]… [#56]… [#51]… [#54]…~~ Superseded 2026-09-16 evening — #57 measure-shell shipped; tomorrow = #19 versioning.
+- ~~**Next:** Merge child #49… social fills + 404s…~~ Superseded 2026-09-16 afternoon — #49/#50 merged; DevTools mop issues opened.
+- ~~**Next (tomorrow):** (1) Social icon SVG… (2) Resume #51 methodically…~~ Superseded 2026-09-16 — sandbox landed at `0.33vw`; next = graduate it.
+- **Hard lock (2026-09-15):** Day-to-day = **org modules + Pages** only. Do not edit SOT for kit work unless Mark asks.
+- ~~**#13 paused:** [`haz_img`](plans/haz_img_shortcode_4d1f620b.plan.md) waits until measure/type shoulders (#51) are settled.~~ Superseded 2026-09-18 — #13 v1 shipped (core #37, child #64/#65, content #10/#11); pass 2 TODOs remain.
+- **Bigger picture:** Prioritize **HAZ** showable alpha.
+- **Also queued:** [#49](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/49) content refresh; pre-#21 meta/fuchsia/starter.
 - **Issue first / PR workflow** locked; Mark merges; do not merge `main`.
-- **Pages:** after child CSS/module merges, kick a **new** dispatch (re-run keeps the original content SHA).
+- **Pages:** after child/core merges, kick a **new** dispatch (re-run keeps old content SHA). Core dogfood = branch **`v1.x.x`** (tag `v1.0.0` remains; `v1.0.1` deleted).
+- ~~**Tomorrow first:** Social icon SVG… then `#13`…~~ Superseded 2026-09-15 — social fills + `#51` tomorrow; `#13` paused; restore day.
+- ~~**Next (after mop / when ready):** [#13]… + [#49]…~~ Superseded 2026-09-15 — `#13` blocked on `#51`.
 - ~~**Next sitting (weekend-friendly):** [#13]… + [#49]…~~ Superseded 2026-09-14 — `#13` plan ready (sleep); social SVG fills first tomorrow.
 - ~~**Next sitting:** Start **HAZ.com content** (long arc)…~~ Superseded 2026-09-11 — showable alpha via #13 + #49 first; HAZ.com content still the long arc.
 - ~~**Next sitting:** Finish [#43] Phase 2… `params.short_desc`…~~ Superseded 2026-09-03 — #43 list + desc meta shipped; HAZ.com content is the jump-in.
@@ -308,6 +320,97 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 ---
 
 ## Meetings
+
+### 2026-09-22 (night) — reorg confirmed; #13 eyes-on paused
+
+- Folder reorg is **done**: parent `C:\_au\work\haz\dev` (was `work/hugo/dev`). HQ + thin `AGENTS.md` at the org root; ship repos under `project-modules/`; parked original + monorepo at `haz/dev/archive`. Thin org `AGENTS.md` updated to match.
+- [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) is the `haz_img` shortcode (still open). Eyes-on close **paused until morning** — fresh review, then close if OK. Freeq after that.
+- **Image widths:** Mark corrected the gutter/margin tweak. Do not keep subtracting `content_inset` (1rem × 2) so variants match the padded hole. Size to the band; files a bit larger than the window is fine. That ~1rem does not hurt.
+- **Morning:** full top-to-bottom of #13, including new demo images exported from that formula at the new widths (not a code-only skim).
+- **Ladder documented** in [`.cursor/skills/haz-img-exports/SKILL.md`](../.cursor/skills/haz-img-exports/SKILL.md): xs = ½ mobile max, sm = mobile max, md = tablet max, lg = full width, xl = 1.5×lg, xxl = 2×lg. No `content_inset` subtract. Dogfood px: 194 / 388 / 620 / 775 / 1163 / 1550.
+- **Morning revisit:** full-width px is `--haz_measure_type` (`65ch`) converted to px for image dimensions (DevTools). Reconcile that with `--haz_measure` / `45rem` / `content_width_px: 775` then — do not treat `ch` and the image spine as unrelated.
+
+### 2026-09-22 (evening) — haz_img live + workspace cutover
+
+- Live demo-post-1 had `haz_img` but **zero output**: content/child already on m/t/d; Pages still pulled core `@v1.x.x` at #38 (preset SC). Fail-closed (comment gone after minify).
+- Shipped: Mark merged core [#40](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/40), child [#67](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/67), content [#20](https://github.com/hugo-agent-zero/hugoagentzero_com-content/pull/20); **FF `v1.x.x` → main**; Pages redispatched — three imgs + srcset/`haz_img_w_*` live.
+- Knobs live in child `settings.images.config` — **not** a separate `images.yaml`.
+- `{{< haz key="blog" >}}` aside = FPO shortcode-route dogfood, not `haz_img`.
+- **Workspace:** day-to-day = **`hugo-agent-zero-org`**; HQ brain = this repo; thin org-root `AGENTS.md` pointer. `child-content` = template; `hugoagentzero_com-content` = dogfood/Pages. Mark parking sibling original + monorepo under `dev/archive`. **Done same day** — parent `work/haz/dev`; modules in `project-modules/`; archive at `haz/dev/archive`.
+
+### 2026-09-22 (afternoon) — haz_img band-relative m/t/d rethink + spin
+
+- Agreed: m/t/d % are of **tier band max** (not always measure). Binary m/d hid it → ship tablet now.
+- Language: **`min_tablet` / `min_desktop`**; **`content_inset`**; derive xs/sm/md/lg from usable bands.
+- Closed unmerged: core #39, child #66, content #19. Opened then merged: core [#40](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/40), child [#67](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/67), content [#20](https://github.com/hugo-agent-zero/hugoagentzero_com-content/pull/20).
+- Skill: `.cursor/skills/haz-img-exports`. Align still [#62](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/62).
+
+### 2026-09-18 — #13 haz_img v1 dogfood; DevTools DPR scare; pass 2 parked
+
+- Unpaused [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13): paired `haz_img` — author owns `<img>` + Inner HTML; `key` → `settings.images.presets`; stem from `src=` → `.Page.Resources` → `srcset`; explicit `sizes` + class. No `wrapper_*` params.
+- Naming pass: not `window`/`width` — **`key`** into presets. Mnemonic `%` keys (`100_100` / `50_50` / `25_25`). Convention corrected to **mobile-first** `M_D` (cleanup next pass; equal keys unchanged).
+- Spine: DevTools rem-ceiling measure **~775px** → `content_width_px: 775` for `Nw`; round export ladder 200/400/600/800/1200/1600 for humans. Layout stays `45rem`.
+- Shipped: core [#37](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/37), child [#64](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/64) + sizes `100vw` [#65](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/65), content demo [#10](https://github.com/hugo-agent-zero/hugoagentzero_com-content/pull/10) + `50_50` test [#11](https://github.com/hugo-agent-zero/hugoagentzero_com-content/pull/11). FF **`v1.x.x`** after core (Pages had bombed: shortcode missing until FF).
+- False alarm: Chrome Responsive mode forced **DPR 2** on a 1× HD panel — looked like `sizes` over-fetch. Real window resize @ ~800 → `_lg` as expected. `50_50` @ full → `_sm` (half of 775) correct.
+- **Pass 2 TODOs:** Inner wrapper tags; eyes-on shortcode HTML; mobile-first docs/comments; more retest. Orig master still in bundle (watch later).
+- Opened [#59](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/59) — v2+ extract `haz_img` as reusable Hugo module (portable config vs sysManifest).
+
+**Plans:**
+- [haz_img shortcode v1](plans/haz_img_shortcode_v1_3772b6f3.plan.md) — HQ #13, core #37, child #64, **shipped**
+- [haz_img preset rename](plans/haz_img_preset_rename_8f81aaf7.plan.md) — HQ #13, child #64/#65, **shipped**
+- Long-form design still [haz_img_shortcode_4d1f620b](plans/haz_img_shortcode_4d1f620b.plan.md)
+
+### 2026-09-16 (evening) — #57 measure-shell padding (+ mobile chrome mop)
+
+**Ticket:** [#57](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/57) — Pico + HTML5 measure-shell padding (one ticket; FAQ aside included). Left **OPEN** for Mark eyes-on / close.
+
+**Shipped (iterate hard):** Shared shell inset on measure-column landmarks; `main > article` no double pad; FAQ `section` → `aside`; header/footer full-bleed chrome (content rows = measure); socials keep **`.haz_socials` inset** (moving to `body > nav` was wrong — panel + pre-footer both need it). Mobile **outside** gutters = `--haz_measure` 95% → 90% at `min-width: 40rem` — **not** halved `padding-inline` on main/aside. Header controls tighter on small screens (`0.4rem 0.2rem`); brand `max-width` `53vw`.
+
+**Core PRs:** [#30](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/30)–[#35](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/35). **Child:** [#56](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/56)–[#61](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/61) (pins + FAQ + socials restore + brand).
+
+**Lesson / tomorrow:** Hash pin PRs = noise. [#19](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/19) `@v1.x.x` was parked after the #51 thrash restore — **not** rejected. Revive first thing next sitting so consumers (and we) stop babysitting `go.mod`.
+
+**Plans:**
+- [Measure shell padding](plans/measure_shell_padding_caf5aec4.plan.md) — HQ [#57](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/57); status **shipped** (eyes-on / close still open)
+
+### 2026-09-16 (afternoon) — #51 graduated; FA 404s fixed; DevTools mop issues
+
+**#51 finalize:** Child [PR #49](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/49) merged — sandbox promoted into Site settings `:root`; baseline `0.9rem+0.35vw` gone; Pico `@media` reasserts dropped. Mark: result **VG+** after a tiring slog.
+
+**Social / 404s:** Host-root `/vendor/fontawesome-free/...` masks again (SOT copy regression). Live Pages → `github.io/vendor/...` 404. Restored `third_party/… | relURL` + chrome/social hover fills — child [PR #50](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/50) merged. Lesson: do **not** full-file overwrite child CSS from SOT.
+
+**Opened (HQ):** [#54](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/54) blog How To (fluid font ↔ `haz_img`); [#55](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/55) deprecate `apple-mobile-web-app-capable` → `mobile-web-app-capable`; [#56](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/56) CSP meta — drop `frame-ancestors` / `sandbox` / `prefetch-src` (ignored or obsolete in `<meta>`).
+
+**Break:** Mark out; pick next steps when back (`#55`/`#56` mop vs unpause `#13` / `#51` acceptance).
+
+### 2026-09-16 — #51 sandbox dialed to 0.33vw; finalize next
+
+**Status:** Finalize + FA mop landed same day — see afternoon entry.
+
+**#51 (child sandbox, methodical):** Left baseline clamp alone; iterated in the AFTER sandbox. Locked shape: sweet/type both `65ch` → delta = 1 at rest; **delta on max only**; preferred = `0.9rem + --haz_font_vw` (no `* delta`); min always `100%`. Pico breakpoint reasserts still present (kill on finalize).
+
+**Fudge mental model (locked):** Higher `--haz_font_vw` → larger mid at every width → ~16px floor at a **narrower** viewport (later when shrinking). Lower fudge → floor at a **wider** width. Dialed **`0.33vw`** (was `0.375` → felt roomy; wide end climbs a bit less — still OK).
+
+**Shipped (child):** [PR #44](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/44)–[#48](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/48) merged — sandbox AFTER baseline → max-only delta → `--haz_font_vw` knob → `0.33vw`. Refs HQ [#51](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/51).
+
+**Called, not done this sitting:** ~~De-sandbox / finalize…~~ Done afternoon ([PR #49](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/49)).
+
+**Still queued (morning):** ~~Social SVG / 404s~~ → [PR #50](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/50). Blog How To → [#54](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/54). `#13` still paused pending `#51` acceptance.
+
+### 2026-09-15 — #51 measure/type attempt; restore day; #13 paused
+
+**Sequence lock:** [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) `haz_img` **paused** until [#51](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/51) (measure as constant → type follows) is settled. Net-new shortcode waits; open type/measure hole first. Parked media-library idea as [#52](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/52) (v3-ish; Mom Test fail as default).
+
+**Design (good):** 65ch = HAZ sweet spot. Fluid root: `clamp(100%, val(delta), max(delta))` with delta from measure vs sweet; min never below browser base. `wrapper_*` on `haz_img` for later galleries (plan updated; not built). Work **modules + Pages only** — not SOT monolith.
+
+**Execution (bad — lesson):** First try thrashed child spike → core move → tags/pins/Pages `@v1.x.x` downgrade → unclear Pico vs HAZ cascade. Too many moving parts for “update the fluid clamp.” Mark: be **10× more methodical**; don’t put a core concern in child then chase workflow.
+
+**EOD restore:** Revert PRs merged (or ready) to pre-2026-09-15 footing — core / child / content. Deleted core tag **`v1.0.1`** (only **`v1.0.0`** left). Live fluid type again = child `pico-override` old clamp `100% / 0.9rem+0.35vw / 112.5%`.
+
+**Tomorrow:** (1) Social SVG chrome fills mop. (2) Plan `#51` retry calmly on stable ground. Then `#13` when shoulders exist.
+
+**Plans:**
+- [haz_img shortcode](plans/haz_img_shortcode_4d1f620b.plan.md) — HQ [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13); status **paused** (depends on [#51](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/51))
 
 ### 2026-09-14 — haz_img (#13) plan designed; sleep on it; social SVG fills tomorrow
 
