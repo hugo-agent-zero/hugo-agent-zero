@@ -36,7 +36,8 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ### Now
 
-- **Next:** Merge [#63](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/63) PRs (staging-content rename + child import + HQ README). Then #13 eyes-on. Website org / `project-website/` after that.
+- **Next:** Wait for GitHub Pages HTTPS cert on hugoagentzero.com, then Enforce HTTPS. Pull `haz-com-child` + `haz-com-content` and fix live CSS. Then How To stub for [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) on HAZ.com (not staging).
+- ~~**Next:** Merge [#63](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/63) PRs… Website org / `project-website/` after that.~~ Superseded 2026-09-23 EOD — kit rename + website org stood up; HTTP site live; HTTPS + CSS still open.
 - ~~**Next (morning):** Full top-to-bottom review of [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) (`haz_img`)…~~ Superseded 2026-09-23 — kit vs HAZ.com split first; content repo renamed to `hugo-agent-zero-env-staging-content`.
 - ~~**Next:** Close [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) if eyes-on OK; Freeq.~~ Superseded 2026-09-22 night — paused for a morning review with fresh eyes.
 - ~~**Next:** Workspace = **`hugo-agent-zero-org`** … Park sibling original + monorepo under `dev/archive` when ready.~~ Superseded 2026-09-22 — reorg done. Parent `C:\_au\work\haz\dev`. HQ + thin `AGENTS.md` at org root; ship repos under `project-modules/`; archive at `haz/dev/archive`.
@@ -320,6 +321,17 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 ---
 
 ## Meetings
+
+### 2026-09-23 — kit vs HAZ.com org; hugoagentzero.com HTTP live
+
+- Kit content repo renamed to [`hugo-agent-zero-env-staging-content`](https://github.com/hugo-agent-zero/hugo-agent-zero-env-staging-content) ([#63](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/63)). Staging ≠ HAZ.com. Local folder matches. HQ README lists kit vs website org ([#64](https://github.com/hugo-agent-zero/hugo-agent-zero/pull/64); [#65](https://github.com/hugo-agent-zero/hugo-agent-zero/pull/65) names the repos).
+- Website org [`hugoagentzero-com`](https://github.com/hugoagentzero-com): copies [`haz-com-child`](https://github.com/hugoagentzero-com/haz-com-child) + [`haz-com-content`](https://github.com/hugoagentzero-com/haz-com-content). Kit child is a GitHub template now. Other HAZ sites stay outside `haz/`.
+- Pages: `build-pages` on haz-com-content (checkout child, pin content SHA, core `@v1.x.x`, apex `baseURL`). Billing/email still `github@dev.hugoagentzero.com`.
+- DNS: Cloudflare grey-cloud. Deleted Namecheap URL-forward A + parking `www`. Apex four GitHub A records; `www` CNAME `hugoagentzero-com.github.io`. HTTP **200** from GitHub. HTTPS cert not issued yet — Enforce HTTPS still locked. Skip CF-in-front-of-Pages (orange cloud = 522).
+- Live CSS looks broken. Parked until HTTPS is on, then pull the two haz-com repos and debug. How To for #13 still not written.
+
+**Plans:**
+- [HAZ.com site split](plans/haz.com_site_split_accd45d6.plan.md) — HQ [#63](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/63); status **in_progress** (HTTPS + CSS + How To stub remain)
 
 ### 2026-09-22 (night) — reorg confirmed; #13 eyes-on paused
 
