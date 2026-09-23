@@ -21,6 +21,11 @@ PRs go on the repo you changed:
 
 ## The website org
 
-**HAZ.com** (HugoAgentZero.com) lives in another GitHub org. It is a *site*: copies of child + child-content that consume **core**, same as any other consumer.
+**HAZ.com** (HugoAgentZero.com) lives in [hugoagentzero-com](https://github.com/hugoagentzero-com). It is a *site*: copies of child + child-content that consume **core**, same as any other consumer.
+
+| Repo | Role |
+|---|---|
+| [haz-com-child](https://github.com/hugoagentzero-com/haz-com-child) | HAZ.com build root |
+| [haz-com-content](https://github.com/hugoagentzero-com/haz-com-content) | HAZ.com content |
 
 It is not in this org because this org is the kit. Staging Pages is the kit crash dummy; HAZ.com is the product site.
