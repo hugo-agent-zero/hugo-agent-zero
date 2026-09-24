@@ -20,8 +20,8 @@ From `layouts/_partials/child/data/system_manifest/settings.yaml` → `settings.
 
 | Knob | Meaning |
 |------|---------|
-| `content_width` | Measure (e.g. `55rem`) — desktop `sizes` length |
-| `content_width_px` | Column px from DevTools (e.g. `1105`) — `lg` = min(this, min_desktop) |
+| `content_width` | Measure (`65ch` = sweet) — desktop `sizes` length |
+| `content_width_px` | Column px from DevTools — re-read after measure unit changes. `lg` = min(this, min_desktop) |
 | `breakpoints.min_tablet` | Viewport px where tablet starts (Pico md, 768) |
 | `breakpoints.min_desktop` | Viewport px where desktop starts (Pico lg, 992) |
 
