@@ -21,7 +21,7 @@ From `layouts/_partials/child/data/system_manifest/settings.yaml` → `settings.
 | Knob | Meaning |
 |------|---------|
 | `content_width` | Measure (e.g. `55rem`) — desktop `sizes` length |
-| `content_width_px` | Column px from DevTools (e.g. `990` = 55rem at 18px) — `lg` = min(this, min_desktop) |
+| `content_width_px` | Column px from DevTools (e.g. `1105`) — `lg` = min(this, min_desktop) |
 | `breakpoints.min_tablet` | Viewport px where tablet starts (Pico md, 768) |
 | `breakpoints.min_desktop` | Viewport px where desktop starts (Pico lg, 992) |
 
@@ -42,7 +42,7 @@ Author keys `m{pct}_t{pct}_d{pct}` are **% of that tier’s hole** for `sizes` a
 
 ## Default kit (current dogfood)
 
-`content_width: 55rem`, `content_width_px: 990`, `min_tablet: 768`, `min_desktop: 992`:
+`content_width: 55rem`, `content_width_px: 1105`, `min_tablet: 768`, `min_desktop: 992`:
 
 | File suffix | Role | Width (px) |
 |-------------|------|------------|
@@ -50,9 +50,9 @@ Author keys `m{pct}_t{pct}_d{pct}` are **% of that tier’s hole** for `sizes` a
 | `_xs` | half of mobile max | 345 |
 | `_sm` | mobile max | 690 |
 | `_md` | tablet max | 892 |
-| `_lg` | min(column, 992) | 990 |
-| `_xl` | 1.5× lg | 1485 |
-| `_xxl` | 2× lg | 1980 |
+| `_lg` | min(column, 992) | 992 |
+| `_xl` | 1.5× lg | 1488 |
+| `_xxl` | 2× lg | 1984 |
 
 Recompute if the knobs change.
 
