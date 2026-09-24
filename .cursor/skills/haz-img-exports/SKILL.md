@@ -10,7 +10,7 @@ description: >-
 
 When exporting Affinity/Photoshop (or similar) sizes for `haz_img` page-bundle files (`stem.jpg`, `stem_xs.jpg`, … `stem_xxl.jpg`), derive widths from **child** `settings.haz_img.config`. Do not invent a parallel ladder.
 
-**When** (viewport) is Pico `md` / `lg` = `min_tablet` / `min_desktop` (768 / 992). Not a fraction of measure.
+**When** (viewport) comes from the **CSS library**, not from measure. HAZ default is Pico `md` / `lg` → `min_tablet` / `min_desktop` (768 / 992). Pico is the opinion, not a lock — swap the library → restamp these and the CSS `@media` literals.
 
 **How-wide** is the column. `lg` = `content_width_px` (Inspect outer width). Do not cap at `min_desktop`. Do not subtract `content_inset`.
 
@@ -22,8 +22,8 @@ From `layouts/_partials/child/data/system_manifest/settings.yaml` → `settings.
 |------|---------|
 | `content_width` | Measure (`68ch` = sweet) — desktop `sizes` length; keep this unit (not rem) |
 | `content_width_px` | Inspect outer column — that is `lg`. Re-read after type/measure changes |
-| `breakpoints.min_tablet` | Viewport px where tablet starts (Pico md, 768) |
-| `breakpoints.min_desktop` | Viewport px where desktop starts (Pico lg, 992) |
+| `breakpoints.min_tablet` | Viewport px where tablet starts — from the CSS library (Pico md = 768) |
+| `breakpoints.min_desktop` | Viewport px where desktop starts — from the CSS library (Pico lg = 992) |
 
 `content_inset` and `rem_px` are not part of this formula. Column vs viewport above 40rem uses 90% (child `--haz_measure`).
 
