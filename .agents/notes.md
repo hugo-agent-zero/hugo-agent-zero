@@ -36,7 +36,8 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ### Now
 
-- **Next:** Merge HAZ.com starter PRs ([haz-com-content #2](https://github.com/hugoagentzero-com/haz-com-content/pull/2), [haz-com-child #2](https://github.com/hugoagentzero-com/haz-com-child/pull/2)), then dispatch **build-pages**. After that: Enforce HTTPS (cert is approved), then [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) eyes-on + new image exports.
+- **Next:** Resume [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) How To outline (plan). Staging dogfood: `sizes` / `srcset` match the BPs. Type parked [#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70). Width map parked [#72](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/72).
+- ~~**Next:** Merge HAZ.com starter PRs… then #13 eyes-on + new image exports.~~ Superseded 2026-09-24 afternoon — jumped to #13; sizes dogfood landed. HAZ.com starter / Enforce HTTPS still queued.
 - ~~**Next:** Wait for GitHub Pages HTTPS cert… then How To stub for #13 on HAZ.com.~~ Superseded 2026-09-24 — CSS loads; Lorem starter PRs open for [#21](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/21).
 - ~~**Next:** Merge [#63](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/63) PRs… Website org / `project-website/` after that.~~ Superseded 2026-09-23 EOD — kit rename + website org stood up; HTTP site live; HTTPS + CSS still open.
 - ~~**Next (morning):** Full top-to-bottom review of [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) (`haz_img`)…~~ Superseded 2026-09-23 — kit vs HAZ.com split first; content repo renamed to `hugo-agent-zero-env-staging-content`.
@@ -322,6 +323,16 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 ---
 
 ## Meetings
+
+### 2026-09-24 (afternoon) — #13 sizes finally honest; break
+
+- Resumed [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13). Type knobs fought (100ch / 102.5% max); parked [#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70). Optional widths map vs formula parked [#72](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/72).
+- Locked: Pico **when** 768 / 992; `lg` = Inspect column **1065**; gutter 95%→90% at `min_tablet` (not `40rem`). `sizes` is **px** snapped to the band. `xl` / `xxl` are DPR, not BPs. Pages was still on stale `v1.x.x` (#40 rem `sizes`) until FF — that is why live markup lied after the merge.
+- Staging demo-post-1: one `<img>`; ladder regen; `*.orig` gitignored. Eyes-on 1×: `xs` / `sm` / `md` / `lg` at the BPs. Mobile sim = fatter files. Mark: great → time suck; break. Pickup = How To outline in the plan.
+- Lesson: after core → `main`, **FF `v1.x.x` in the same sitting** or Pages keeps the old shortcode.
+
+**Plans:**
+- [#13 haz_img review](plans/%2313_haz_img_review_4b9bb92c.plan.md) — HQ #13; status **in_progress** (How To outline still pending)
 
 ### 2026-09-24 — HAZ.com starter Lorem stubs
 
