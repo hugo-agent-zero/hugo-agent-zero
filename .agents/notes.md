@@ -36,7 +36,8 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ### Now
 
-- **Next:** Wait for GitHub Pages HTTPS cert on hugoagentzero.com, then Enforce HTTPS. Pull `haz-com-child` + `haz-com-content` and fix live CSS. Then How To stub for [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) on HAZ.com (not staging).
+- **Next:** Merge HAZ.com starter PRs ([haz-com-content #2](https://github.com/hugoagentzero-com/haz-com-content/pull/2), [haz-com-child #2](https://github.com/hugoagentzero-com/haz-com-child/pull/2)), then dispatch **build-pages**. After that: Enforce HTTPS (cert is approved), then [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) eyes-on + new image exports.
+- ~~**Next:** Wait for GitHub Pages HTTPS cert… then How To stub for #13 on HAZ.com.~~ Superseded 2026-09-24 — CSS loads; Lorem starter PRs open for [#21](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/21).
 - ~~**Next:** Merge [#63](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/63) PRs… Website org / `project-website/` after that.~~ Superseded 2026-09-23 EOD — kit rename + website org stood up; HTTP site live; HTTPS + CSS still open.
 - ~~**Next (morning):** Full top-to-bottom review of [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) (`haz_img`)…~~ Superseded 2026-09-23 — kit vs HAZ.com split first; content repo renamed to `hugo-agent-zero-env-staging-content`.
 - ~~**Next:** Close [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) if eyes-on OK; Freeq.~~ Superseded 2026-09-22 night — paused for a morning review with fresh eyes.
@@ -322,13 +323,22 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ## Meetings
 
+### 2026-09-24 — HAZ.com starter Lorem stubs
+
+- CSS on https://hugoagentzero.com/ is loading this morning. Cert approved; Enforce HTTPS still off last check.
+- [#21](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/21) starter reset: Home / About / Getting Started / Blog / Contact, Lorem only. Dropped Team and Page Test. FAQ Lorem on both doors. Blog starts over with one How To stub: **Shortcode: haz_img Explained** (real copy waits for #13 eyes-on).
+- PRs (Mark merges): [haz-com-content #2](https://github.com/hugoagentzero-com/haz-com-content/pull/2), [haz-com-child #2](https://github.com/hugoagentzero-com/haz-com-child/pull/2). Dispatch **build-pages** after both. Kit `child` / `child-content` / staging untouched.
+
+**Plans:**
+- [HAZ.com content stubs](plans/haz.com_content_stubs_d07cbe52.plan.md) — HQ [#21](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/21)
+
 ### 2026-09-23 — kit vs HAZ.com org; hugoagentzero.com HTTP live
 
 - Kit content repo renamed to [`hugo-agent-zero-env-staging-content`](https://github.com/hugo-agent-zero/hugo-agent-zero-env-staging-content) ([#63](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/63)). Staging ≠ HAZ.com. Local folder matches. HQ README lists kit vs website org ([#64](https://github.com/hugo-agent-zero/hugo-agent-zero/pull/64); [#65](https://github.com/hugo-agent-zero/hugo-agent-zero/pull/65) names the repos).
 - Website org [`hugoagentzero-com`](https://github.com/hugoagentzero-com): copies [`haz-com-child`](https://github.com/hugoagentzero-com/haz-com-child) + [`haz-com-content`](https://github.com/hugoagentzero-com/haz-com-content). Kit child is a GitHub template now. Other HAZ sites stay outside `haz/`.
 - Pages: `build-pages` on haz-com-content (checkout child, pin content SHA, core `@v1.x.x`, apex `baseURL`). Billing/email still `github@dev.hugoagentzero.com`.
 - DNS: Cloudflare grey-cloud. Deleted Namecheap URL-forward A + parking `www`. Apex four GitHub A records; `www` CNAME `hugoagentzero-com.github.io`. HTTP **200** from GitHub. HTTPS cert not issued yet — Enforce HTTPS still locked. Skip CF-in-front-of-Pages (orange cloud = 522).
-- Live CSS looks broken. Parked until HTTPS is on, then pull the two haz-com repos and debug. How To for #13 still not written.
+- Live CSS looks broken. Parked until HTTPS is on, then pull the two haz-com repos and debug. How To for #13 still not written. **Update 2026-09-24:** CSS is loading; How To stub is Lorem on the HAZ.com PRs.
 
 **Plans:**
 - [HAZ.com site split](plans/haz.com_site_split_accd45d6.plan.md) — HQ [#63](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/63); status **in_progress** (HTTPS + CSS + How To stub remain)
