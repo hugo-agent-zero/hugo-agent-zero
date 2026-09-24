@@ -1,6 +1,6 @@
 ---
 name: "#13 haz_img review"
-overview: Process for haz_img — BPs from the CSS library, column, inspect px, export, key, see it. Pico is HAZ default, replaceable. How To follows this order. .com later.
+overview: How To starts with Why/What — sizes first, then srcset. Read Portis. Then the process. Pico is HAZ default, replaceable. .com later.
 session: "2026-09-24"
 status: in_progress
 hq_issue: https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13
@@ -19,17 +19,37 @@ todos:
 isProject: false
 ---
 
-# Process: haz_img
+# Shortcode: haz_img Explained
 
-Working title: **Shortcode: haz_img Explained**
-
-Same order in the blog post, `settings.haz_img`, and the export skill. Do not invent a second story.
-
-HAZ ships **defaults** (opinions). We are not locked to them. Don’t like our CSS library / type / column? Replace that piece and restamp the numbers that came from it.
-
-`.com` How To waits for a `haz-com-content` issue + both agree. Until then this file **is** the process.
+This file **is** the How To until we open a HAZ.com content issue and both agree.
 
 ---
+
+## Why
+
+One photo file is a bad deal. A phone pulls a huge desktop picture and wastes time and data. A big screen gets a tiny picture and it looks fuzzy.
+
+The browser can choose among several copies of the same picture — but only if we tell it two things:
+
+1. **How wide will this picture be on the page?** That is `sizes`.
+2. **How wide is each file we made?** That is `srcset`.
+
+Most front-end people think the magic is `srcset` (the list of files). It isn’t. The list is the menu. `sizes` is the order you place. If you lie about how wide the picture will show, the browser picks the wrong file. Wrong `sizes` → wrong picture, every time.
+
+That is the whole point of `haz_img`: we write `sizes` from the real page (when the layout changes, how wide the text column is, how much of that space the picture should take). Then `srcset` is just the matching files.
+
+**Read this first:** [Eric Portis — Srcset and sizes](https://ericportis.com/posts/2014/srcset-sizes/). If you only remember one thing from it: the browser needs the on-page width (`sizes`) *before* it can use the file list (`srcset`).
+
+## What
+
+You write a normal `<img>` (alt text, the file name, lazy-load if you want). You tell the shortcode how much of the text column the picture should use on phone, tablet, and desktop. HAZ fills in `sizes` and `srcset`. You still own the tag.
+
+HAZ ships a starting point (we like Pico). You can replace the CSS system, the column, the type. Then you copy the new numbers into settings and into the CSS. We are not married to Pico.
+
+---
+
+## How (do this in order)
+
 
 ## 1. Name *when* — breakpoints from the CSS library
 
