@@ -12,7 +12,7 @@ When exporting Affinity/Photoshop (or similar) sizes for `haz_img` page-bundle f
 
 **When** (viewport) is Pico `md` / `lg` = `min_tablet` / `min_desktop` (768 / 992). Not a fraction of measure.
 
-**How-wide** is the column. `lg` = `content_width_px` (DevTools on `--haz_measure` / `--haz_measure_type` 65ch). Do not subtract `content_inset`. Files run about 1rem larger than the padded hole; that overshoot is accepted.
+**How-wide** is the column, capped by the desktop BP. `lg` = `min(content_width_px, min_desktop)`. DevTools on `--haz_measure_type` (65ch) → store as `content_width_px`. Do not subtract `content_inset`.
 
 ## Knobs
 
@@ -21,7 +21,7 @@ From `layouts/_partials/child/data/system_manifest/settings.yaml` → `settings.
 | Knob | Meaning |
 |------|---------|
 | `content_width` | Measure (e.g. `45rem`) — desktop `sizes` length |
-| `content_width_px` | Full width in px (e.g. `775`) — export `lg` |
+| `content_width_px` | Column px from DevTools (e.g. `810`) — `lg` = min(this, min_desktop) |
 | `breakpoints.min_tablet` | Viewport px where tablet starts (Pico md, 768) |
 | `breakpoints.min_desktop` | Viewport px where desktop starts (Pico lg, 992) |
 
@@ -30,7 +30,7 @@ From `layouts/_partials/child/data/system_manifest/settings.yaml` → `settings.
 ## Ladder
 
 ```
-lg  = content_width_px
+lg  = min(content_width_px, min_desktop)        # column, never the BP itself
 sm  = min(lg, round(0.9 × (min_tablet − 1)))    # column just below tablet MQ
 md  = min(lg, round(0.9 × (min_desktop − 1)))   # column just below desktop MQ
 xs  = round(sm × 0.5)
@@ -42,17 +42,17 @@ Author keys `m{pct}_t{pct}_d{pct}` are **% of that tier’s hole** for `sizes` a
 
 ## Default kit (current dogfood)
 
-`content_width_px: 775`, `min_tablet: 768`, `min_desktop: 992`:
+`content_width_px: 810`, `min_tablet: 768`, `min_desktop: 992`:
 
 | File suffix | Role | Width (px) |
 |-------------|------|------------|
 | (base / master) | ≥ xxl, or lg — author choice | |
 | `_xs` | half of mobile max | 345 |
 | `_sm` | mobile max | 690 |
-| `_md` | tablet max (capped at lg) | 775 |
-| `_lg` | full width | 775 |
-| `_xl` | 1.5× full width | 1163 |
-| `_xxl` | 2× full width | 1550 |
+| `_md` | tablet max (capped at lg) | 810 |
+| `_lg` | min(column, 992) | 810 |
+| `_xl` | 1.5× lg | 1215 |
+| `_xxl` | 2× lg | 1620 |
 
 Recompute if the knobs change.
 
