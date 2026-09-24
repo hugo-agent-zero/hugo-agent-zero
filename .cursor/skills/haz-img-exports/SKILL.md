@@ -12,7 +12,7 @@ When exporting Affinity/Photoshop (or similar) sizes for `haz_img` page-bundle f
 
 **When** (viewport) is Pico `md` / `lg` = `min_tablet` / `min_desktop` (768 / 992). Not a fraction of measure.
 
-**How-wide** is the column, capped by the desktop BP. `lg` = `min(content_width_px, min_desktop)`. DevTools on `--haz_measure_type` (65ch) → store as `content_width_px`. Do not subtract `content_inset`.
+**How-wide** is the column. `lg` = `content_width_px` (Inspect outer width). Do not cap at `min_desktop`. Do not subtract `content_inset`.
 
 ## Knobs
 
@@ -20,8 +20,8 @@ From `layouts/_partials/child/data/system_manifest/settings.yaml` → `settings.
 
 | Knob | Meaning |
 |------|---------|
-| `content_width` | Measure (e.g. `55rem`) — desktop `sizes` length |
-| `content_width_px` | Column px from DevTools (e.g. `990` = 55rem at 18px) — `lg` = min(this, min_desktop) |
+| `content_width` | Measure (`68ch` = sweet) — desktop `sizes` length; keep this unit (not rem) |
+| `content_width_px` | Inspect outer column — that is `lg`. Re-read after type/measure changes |
 | `breakpoints.min_tablet` | Viewport px where tablet starts (Pico md, 768) |
 | `breakpoints.min_desktop` | Viewport px where desktop starts (Pico lg, 992) |
 
@@ -30,7 +30,7 @@ From `layouts/_partials/child/data/system_manifest/settings.yaml` → `settings.
 ## Ladder
 
 ```
-lg  = min(content_width_px, min_desktop)        # column, never the BP itself
+lg  = content_width_px                          # Inspect outer column
 sm  = min(lg, round(0.9 × (min_tablet − 1)))    # column just below tablet MQ
 md  = min(lg, round(0.9 × (min_desktop − 1)))   # column just below desktop MQ
 xs  = round(sm × 0.5)
@@ -42,7 +42,7 @@ Author keys `m{pct}_t{pct}_d{pct}` are **% of that tier’s hole** for `sizes` a
 
 ## Default kit (current dogfood)
 
-`content_width: 55rem`, `content_width_px: 990`, `min_tablet: 768`, `min_desktop: 992`:
+`content_width: 68ch`, `content_width_px: 1065`, `min_tablet: 768`, `min_desktop: 992`:
 
 | File suffix | Role | Width (px) |
 |-------------|------|------------|
@@ -50,9 +50,9 @@ Author keys `m{pct}_t{pct}_d{pct}` are **% of that tier’s hole** for `sizes` a
 | `_xs` | half of mobile max | 345 |
 | `_sm` | mobile max | 690 |
 | `_md` | tablet max | 892 |
-| `_lg` | min(column, 992) | 990 |
-| `_xl` | 1.5× lg | 1485 |
-| `_xxl` | 2× lg | 1980 |
+| `_lg` | column (Inspect) | 1065 |
+| `_xl` | 1.5× lg | 1598 |
+| `_xxl` | 2× lg | 2130 |
 
 Recompute if the knobs change.
 
