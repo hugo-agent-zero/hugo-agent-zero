@@ -36,7 +36,8 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ### Now
 
-- **Next:** Resume [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) How To outline (plan). Staging dogfood: `sizes` / `srcset` match the BPs. Type parked [#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70). Width map parked [#72](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/72).
+- **Next (morning):** [#81](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/81) — `haz_img` aspect-ratio frame + `object-fit`. Merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) (drop `auto`) first if still open, then FF `v1.x.x`. How To [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) still pending. Type parked [#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70). Width map parked [#72](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/72).
+- ~~**Next:** Resume [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) How To outline (plan). Staging dogfood: `sizes` / `srcset` match the BPs. Type parked [#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70). Width map parked [#72](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/72).~~ Superseded 2026-09-24 night — evening sitting; frame is the morning jump-in.
 - ~~**Next:** Merge HAZ.com starter PRs… then #13 eyes-on + new image exports.~~ Superseded 2026-09-24 afternoon — jumped to #13; sizes dogfood landed. HAZ.com starter / Enforce HTTPS still queued.
 - ~~**Next:** Wait for GitHub Pages HTTPS cert… then How To stub for #13 on HAZ.com.~~ Superseded 2026-09-24 — CSS loads; Lorem starter PRs open for [#21](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/21).
 - ~~**Next:** Merge [#63](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/63) PRs… Website org / `project-website/` after that.~~ Superseded 2026-09-23 EOD — kit rename + website org stood up; HTTP site live; HTTPS + CSS still open.
@@ -323,6 +324,16 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 ---
 
 ## Meetings
+
+### 2026-09-24 (evening) — auto off; frame for tomorrow
+
+- Why / What on [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13): `sizes` first, Portis, mom English. WordPress is the fat-file / bad-fallback example, not the `auto` villain. Wins: column-sized files, honest `sizes`, `m50_t50_d100` keys. How To rewrite still pending.
+- Shipped: `default_lazy` + `lazy=false` ([#75](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/75), core #47, child #77). Classes match the key (`haz_img_m100`) ([#78](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/78), core #49). `auto` on `sizes` ([#76](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/76), core #48) then **undone**: it pinned height at 150 unless the tag had `width`/`height`. We will not add those to the content workflow. Drop-auto: [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80) / [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) (open at pack-up). Closed the attrs PR ([#79](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/79) / core #50).
+- Lesson: Pages `@v1.x.x` lagged again after #48; FF in the same sitting. Executed CSS href does not change — hard-refresh when the sheet looks stale.
+- Parked for morning: [#81](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/81) — shortcode names a frame (`16/9`, `4/3`, `1/1`); `aspect-ratio` draws the window; `object-fit: cover` fills it. Wrapper optional (can live on the `<img>`). Not `auto`.
+
+**Plans:**
+- [#13 haz_img review](plans/%2313_haz_img_review_4b9bb92c.plan.md) — HQ #13; status **in_progress** (How To still pending)
 
 ### 2026-09-24 (afternoon) — #13 sizes finally honest; break
 
