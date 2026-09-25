@@ -36,7 +36,8 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ### Now
 
-- **Next (morning):** [#81](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/81) — `haz_img` aspect-ratio frame + `object-fit`. Merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) (drop `auto`) first if still open, then FF `v1.x.x`. How To [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) still pending. Type parked [#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70). Width map parked [#72](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/72).
+- **Next (when back):** Eyes-on [#81](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/81) — as-is (empty `ratio`, skip `auto` so no 150), then float presets. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80). How To [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) still pending. Type parked [#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70). Width map parked [#72](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/72).
+- ~~**Next (morning):** [#81](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/81) — `haz_img` aspect-ratio frame + `object-fit`. Merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) (drop `auto`) first if still open, then FF `v1.x.x`. How To [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) still pending. Type parked [#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70). Width map parked [#72](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/72).~~ Superseded 2026-09-25 morning — named presets shipped; `auto` stays; frame is the height fix.
 - ~~**Next:** Resume [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) How To outline (plan). Staging dogfood: `sizes` / `srcset` match the BPs. Type parked [#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70). Width map parked [#72](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/72).~~ Superseded 2026-09-24 night — evening sitting; frame is the morning jump-in.
 - ~~**Next:** Merge HAZ.com starter PRs… then #13 eyes-on + new image exports.~~ Superseded 2026-09-24 afternoon — jumped to #13; sizes dogfood landed. HAZ.com starter / Enforce HTTPS still queued.
 - ~~**Next:** Wait for GitHub Pages HTTPS cert… then How To stub for #13 on HAZ.com.~~ Superseded 2026-09-24 — CSS loads; Lorem starter PRs open for [#21](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/21).
@@ -324,6 +325,16 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 ---
 
 ## Meetings
+
+### 2026-09-25 (morning) — named presets; auto stays
+
+- Mark’s inline paste (`aspect-ratio` + `cover` + `height: auto`) fixed the 150 **with `auto` still on**. Frame is the height fix. Do **not** merge [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80) / [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51).
+- Shipped [#81](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/81): named presets (hard cut packed keys). Mom types a string; YAML owns m/t/d, `ratio` as-is, `fit`, open `class`. Core #52, child #78, staging #24. Starter keys: `story_wide`, `half_sqr_left`, `half_sqr_right`. Kit floats: `haz_float_left` / `_right` / `haz_clear`.
+- After merge, live img was 100% MIA (no comment either). Content was already `story_wide`; Pages `@v1.x.x` still on #49. FF `4487f31` → `84b56cc` + dispatch [36151902762](https://github.com/hugo-agent-zero/hugo-agent-zero-env-staging-content/actions/runs/36151902762). Fastly 600s served the empty 15:00 HTML until a hard refresh. Same lesson: FF `v1.x.x` in the sitting.
+- `cover` does not change the photo — it crops to the hole. Empty `ratio` is already as-is (no reserved `as_is` key). Catch: `auto` without a frame is the 150 again. Parked when back: test as-is (skip `auto` on those) and the float presets.
+
+**Plans:**
+- [aspect ratio frame](plans/aspect_ratio_frame_ede86e90.plan.md) — HQ #81; shipped (do not merge #51; `auto` stays)
 
 ### 2026-09-24 (evening) — auto off; frame for tomorrow
 
