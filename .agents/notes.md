@@ -36,7 +36,8 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ### Now
 
-- **Next (when back):** Eyes-on [#81](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/81) — as-is (empty `ratio`, skip `auto` so no 150), then float presets. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80). How To [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) still pending. Type parked [#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70). Width map parked [#72](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/72).
+- **Next (tomorrow):** [#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70) — measure/type refactor. Column max in **px** (A). Font max (B) is the size that puts ~65 of a letter/digit sample in A (not `ch` / zeros). Min is `100%` (C). Slope C→B. No `type`/`sweet` delta. Defaults for our face; swap face → retune A/B/C. `haz_img`: `auto` + aspect-ratio frame is the height lock — do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80). Keys simmer [#89](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/89). Headlines parked [#90](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/90). How To [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) still pending. Width map parked [#72](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/72).
+- ~~**Next (when back):** Eyes-on [#81](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/81) — as-is (empty `ratio`, skip `auto` so no 150), then float presets. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80). How To [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) still pending. Type parked [#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70). Width map parked [#72](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/72).~~ Superseded 2026-09-25 afternoon — mom test passed on nested presets; tomorrow is #70 A/B/C.
 - ~~**Next (morning):** [#81](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/81) — `haz_img` aspect-ratio frame + `object-fit`. Merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) (drop `auto`) first if still open, then FF `v1.x.x`. How To [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) still pending. Type parked [#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70). Width map parked [#72](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/72).~~ Superseded 2026-09-25 morning — named presets shipped; `auto` stays; frame is the height fix.
 - ~~**Next:** Resume [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13) How To outline (plan). Staging dogfood: `sizes` / `srcset` match the BPs. Type parked [#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70). Width map parked [#72](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/72).~~ Superseded 2026-09-24 night — evening sitting; frame is the morning jump-in.
 - ~~**Next:** Merge HAZ.com starter PRs… then #13 eyes-on + new image exports.~~ Superseded 2026-09-24 afternoon — jumped to #13; sizes dogfood landed. HAZ.com starter / Enforce HTTPS still queued.
@@ -326,7 +327,24 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ## Meetings
 
+### 2026-09-25 (afternoon) — haz_img swagger; A/B/C for tomorrow
+
+- Dogfood after nest: as-is, floats, center, spacers. Mom test passed — she picks a key. Mark: left/right images give the page swagger; still simple, looks less “Hugo / static.” We kept `sizes="auto,…"` **and** the aspect-ratio frame — that pair is the height fix. Do **not** merge the drop-auto PR.
+- Shipped: per-band align; `haz_clear` → `haz_tbd type="spacer"` ([#85](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/85)); then nest `w` + `align` under `m`/`t`/`d` ([#88](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/88)). Rename tickets parked: `haz` [#86](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/86), `haz_tbd` [#87](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/87).
+- Pages died twice on `@v1.x.x` lag (missing `haz_tbd`; then old `int(m)` vs nested maps). Same lesson: FF `v1.x.x` **before** Pages in the sitting.
+- Opened [#89](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/89) — revisit ship keys / defaults. Simmer before closing [#13](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/13).
+- Measure vs type ([#70](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/70)): `ch` on `font-size` is just a number. Honest `ch` is column-follows-font. Wanted job is the other way: **px cap** on the column (ultrawide must stop), then the font that puts ~65 of a letter/digit sample in that box. One coupled clamp was not KISS and never quite hit the size in our heads. Locked knobs: **A** column max px, **B** font max, **C** font min (`100%`). Guess B, look, nudge. Child may change the variables; we calibrate for our face.
+- Headlines later: [#90](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/90) — easy alt / brand face. Non-HAZ sites: brand on headlines, body stays the measure system. [#30](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/30) stays size utilities.
+- Pack-up: Mark hitting the wall (cold). Tomorrow = implement #70. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).
+
+**Plans:**
+- [align and spacer](plans/align_and_spacer_2ff7c440.plan.md) — HQ #85; **shipped** (then nested in #88)
+- [nested m t d bands](plans/nested_mtd_bands_88.plan.md) — HQ #88; **shipped**
+- [measure vs type](plans/measure_vs_type_99471e40.plan.md) — HQ #70; **parked** (A/B/C locked; implement tomorrow)
+
 ### 2026-09-25 (morning) — named presets; auto stays
+
+**Status:** afternoon shipped nest + align; mom test passed. Type/#70 is the next sitting.
 
 - Mark’s inline paste (`aspect-ratio` + `cover` + `height: auto`) fixed the 150 **with `auto` still on**. Frame is the height fix. Do **not** merge [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80) / [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51).
 - Shipped [#81](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/81): named presets (hard cut packed keys). Mom types a string; YAML owns m/t/d, `ratio` as-is, `fit`, open `class`. Core #52, child #78, staging #24. Starter keys: `story_wide`, `half_sqr_left`, `half_sqr_right`. Kit floats: `haz_float_left` / `_right` / `haz_clear`.
