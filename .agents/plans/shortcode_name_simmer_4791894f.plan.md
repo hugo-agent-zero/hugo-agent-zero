@@ -1,10 +1,13 @@
 ---
 name: Shortcode name simmer
 session: 2026-09-26
-status: parked
+status: shipped
 hq_issue: https://github.com/hugo-agent-zero/hugo-agent-zero/issues/86
+core_pr: https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/57
 related:
-  - HQ #87 — today’s haz_tbd becomes haz_do
+  - HQ #87 — haz_do (core #57–#59)
+  - HQ #86 — tap haz_tbd (core #60)
+  - HQ #93 — name= not key= (core #61)
 ---
 
 # Shortcode names (simmer)
