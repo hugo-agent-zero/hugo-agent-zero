@@ -56,6 +56,10 @@ Dogfood / child default: **Open Props → Simple (`simple.min`) → `simple-x-ag
 
 **Simple stance:** Simple is desktop-first (`max-width: 720px` undos). Do **not** add more `max-width: 720` patches in `simple-x`. When a Simple default is wrong, override it **at every width**. Future fork (*SimpleAndSmart*) = mobile-first absorb of `simple-x`. Kit chrome that must work on any vendor (e.g. search modal) lives in `haz.css`, not pico-x.
 
+**Aside / float:** Two jobs. (1) **Page landmarks** (`body > aside`, FAQ, …) stay **block in the measure column** — never Simple’s `float: right; width: 30%` pull-quote. (2) **In-article media wrap** (`haz_img` left/right) may use **float**; that is not a reason to float landmarks. Grid/flex own page chrome; float is for wrap-in-flow content only.
+
+**SimpleAndSmart (parked):** Thin absorb ≈ **3–6h** focused (or ~1h/day for a week). Scope = bake in already-rejected defaults (headings, nav-as-links, landmark aside) + fold `simple-x`; form/dialog Simple MQs deferred; no public packaging unless we choose later. Do **not** start the fork until explicitly asked — thicken `simple-x` until a quiet week.
+
 ## CSS naming (HAZ)
 
 We are mostly classless (framework + element styles), but when we invent classes or IDs, follow this so we don’t collide with framework tokens (e.g. Pico `.container`).
