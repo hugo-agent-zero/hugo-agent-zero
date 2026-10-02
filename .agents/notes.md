@@ -36,7 +36,8 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ### Now
 
-- **Next:** After search PR merges + FF `v1.x.x` + Pages: eyes-on search + **light mode**. Then (1) `haz_img` review + docs/blog ([#100](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/100)) — note `haz_img_*` width/float utils still sit in `pico-x` (same stranding class; port to `haz.css` when we touch img). (2) Issue triage. Later: other theme’s shortcodes. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).
+- **Next:** (1) `haz_img` review + docs/blog ([#100](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/100)) — port `haz_img_*` utils from `pico-x` → `haz.css` when touching img; floats OK for media wrap only. (2) Issue triage. Later: other theme’s shortcodes. *SimpleAndSmart* fork parked (~3–6h thin absorb) — **do not start until asked**. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).
+- ~~**Next:** After search PR merges + FF `v1.x.x` + Pages: eyes-on search + **light mode**. Then (1) `haz_img` review + docs/blog ([#100](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/100)) — note `haz_img_*` width/float utils still sit in `pico-x` (same stranding class; port to `haz.css` when we touch img). (2) Issue triage. Later: other theme’s shortcodes. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).~~ Superseded 2026-10-02 — search live; light OK; Simple talk locked (aside/float + fork envelope).
 - ~~**Next:** (0) **Search modal** — F’d after ditch Pico; kit styles still in `pico-x` (not on OP+Simple stack). Diff vs HAZ.com / port into `simple-x` or `haz.css`. Also finish **light mode** eyes-on. Then (1) `haz_img` review + docs/blog draft ([#100](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/100)). (2) Issue triage. Later: other theme’s shortcodes. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).~~ Superseded 2026-10-02 — search ported to `haz.css` (PR); Simple stance locked.
 - ~~**Next:** (1) `haz_img` review + docs notes / blog post draft ([#100](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/100) posts/paging). (2) Issue triage — what to do / close / archive. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).~~ Superseded 2026-10-01 night — search modal broke; fix first tomorrow.
 - ~~**Next:** Mark merges [child #103](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/103) (fluid type on OP theme / #70) → close [#87](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/87) superseded → then `haz_img` once-over + [#100](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/100) posts/paging. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).~~ Superseded 2026-10-01 EOD — fluid + heading ladder shipped; parked for next sitting.
@@ -333,6 +334,13 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 ---
 
 ## Meetings
+
+### 2026-10-02 (morning) — Simple talk: aside/float + fork envelope (docs only)
+
+- Why code shipped earlier: Plan “Implement…” on the breakpoint audit ran [core #79](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/79) (search → `haz.css`); the table itself was discussion. This sitting = **docs lock only** — no SimpleAndSmart coding.
+- Table: #1 headings / #2 nav-as-buttons zapped for good reason. #3 landmarks = **measure block** (never 30% float); floats reserved for **in-article media wrap**. #4 forms / #5 dialog parked until they bite.
+- *SimpleAndSmart* thin absorb ≈ **3–6h** (or ~1h/day for a week): bake rejected defaults + fold `simple-x`; form/dialog deferred; no public packaging. Keep thickening `simple-x` until a quiet week — **do not start fork until asked**.
+- Search already live (#79); `haz_img_*` still in pico-x → port with haz_img sitting. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).
 
 ### 2026-10-02 (morning) — Simple stance + search out of pico-x
 
