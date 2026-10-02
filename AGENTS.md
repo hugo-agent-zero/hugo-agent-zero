@@ -50,6 +50,12 @@ Every atom / molecule / organism **render entry** (file-based `*.html` or folder
 - **Parents** under `helpers/parents/` are for shared **output** only. Do **not** put the enabled / comment / enabled_false gate in the parent — keep that on the Atomic index (e.g. `cols_two_tag_wrapper_000` → parent for markup).
 - **Organisms:** default to a **single file**. Use a **folder** only with a strong case (e.g. defaults + multiple presets such as `cols_two_tag_wrapper_000`). Not a hard ban — justify the folder.
 
+## CSS stack (live kit)
+
+Dogfood / child default: **Open Props → Simple (`simple.min`) → `simple-x-agent-zero` → `haz.css` → child theme / fonts / chrome**. Pico path is parked (files may remain for swap demos).
+
+**Simple stance:** Simple is desktop-first (`max-width: 720px` undos). Do **not** add more `max-width: 720` patches in `simple-x`. When a Simple default is wrong, override it **at every width**. Future fork (*SimpleAndSmart*) = mobile-first absorb of `simple-x`. Kit chrome that must work on any vendor (e.g. search modal) lives in `haz.css`, not pico-x.
+
 ## CSS naming (HAZ)
 
 We are mostly classless (framework + element styles), but when we invent classes or IDs, follow this so we don’t collide with framework tokens (e.g. Pico `.container`).
