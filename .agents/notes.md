@@ -36,7 +36,21 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 
 ### Now
 
-- **Next:** (1) `haz_img` review + docs/blog ([#100](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/100)) — port `haz_img_*` utils from `pico-x` → `haz.css` when touching img; floats OK for media wrap only. (2) Issue triage. Later: other theme’s shortcodes. *SimpleAndSmart* fork parked (~3–6h thin absorb) — **do not start until asked**. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).
+- **Next:** Finish **`haz_img` contract wire** — child `feat/haz-img-settings-shape` (`max_px` / `width_px` / `presets.*.rwd`); core `feat/haz-img-max-px-width-px` (helpers + shortcode + CSS in `haz.css` @ OP 480/768). Then PRs → FF `v1.x.x` → Pages eyes-on. **CSS OOTB bake talk after eyes-on.** **[#59](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/59) later.** haz-com #5 after img. Optional mop [#108](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/108) / [#107](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/107). Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / HQ [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).
+- ~~**Next (paused — resume soon):** Wire **`haz_img`** shortcode + helpers to locked settings shape…~~ Superseded 2026-10-05 evening — naming locked (`max_px`/`width_px`/`rwd`); wiring in flight.
+- ~~**Next:** Proper **`haz_img` review** → implement tight in **core** (ladder knobs + swappable `*_fn` paths…~~ Superseded 2026-10-05 — settings reshape locked (`up_to` + `sizes`); wire next.
+- ~~**Next:** Proper **`haz_img` review** ([#89](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/89) cluster; … After that: bring HAZ.com …~~ Superseded 2026-10-05 — #59 extract deferred until haz_img API is tight.
+- ~~**Next:** Enqueue **done** — closed [#34](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/34) / [#106](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/106); … Then haz_img / #100; triage. …~~ Superseded 2026-10-05 — haz_img review next; haz-com #5 after.
+- ~~**Next:** Enqueue + dingleberry park shipped …~~ Superseded 2026-10-05 — prop smoke passed; #109 strips tests.
+- ~~**Next:** Enqueue shipped. Dingleberries parked on [#108](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/108) …~~ Superseded 2026-10-05 — #86/#107 merged; FF done.
+- ~~**Next:** Enqueue shipped (Phase 1 + silos + debt gate; Pages OK). Later: exercise `enabled` / `in_footer` / …~~ Superseded 2026-10-05 — #108 park list + PRs.
+- ~~**Next:** Eyes-on Pages after silos ([core #85](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/85) + [child #106](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/106); `v1.x.x` FF’d). Merge [haz-com-child #5](https://github.com/hugoagentzero-com/haz-com-child/pull/5) when ready. …~~ Superseded 2026-10-03 EOD — eyes-on OK; prop testing parked.
+- ~~**Next:** Merge enqueue debt-gate + silos: [core #85](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/85) → [child #106](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/106) + [haz-com-child #5](https://github.com/hugoagentzero-com/haz-com-child/pull/5) → FF `v1.x.x` → Pages. …~~ Superseded 2026-10-03 — #85/#106 merged; Pages kick after child.
+- ~~**Next:** Eyes-on staging hashed CSS after enqueue Phase 1 … debt gate before Phase 2 …~~ Superseded 2026-10-03 — Phase 1 live; debt gate + silos PRs open (#85/#106).
+- ~~**Next:** [core #84](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/84) **merged** (`270df58`). Still open: [child #105](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/105). Then FF `v1.x.x` …~~ Superseded 2026-10-03 — child #105 merged; FF + Pages kicked.
+- ~~**Next:** Merge [core #84](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/84) + [child #105](https://github.com/hugo-agent-zero/hugo-agent-zero-child/pull/105) (enqueue Phase 1) → FF `v1.x.x` → Pages eyes-on hashed CSS. **Then debt gate (do not skip / before Phase 2 silos):** …~~ Superseded 2026-10-03 — core #84 merged; child #105 still open.
+- ~~**Next:** Merge [core #80](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/80) (search modal chrome: full-bleed rule + corner close) → FF `v1.x.x` → Pages eyes-on. Then (1) `haz_img` review + docs/blog ([#100](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/100)) — port `haz_img_*` utils from `pico-x` → `haz.css` when touching img; floats OK for media wrap only. (2) Issue triage. Later: other theme’s shortcodes. *SimpleAndSmart* fork parked (~3–6h thin absorb) — **do not start until asked**. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / HQ [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).~~ Superseded 2026-10-03 — search shipped; enqueue Phase 1 merge next; polish is debt gate.
+- ~~**Next:** (1) `haz_img` review + docs/blog ([#100](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/100)) — port `haz_img_*` utils from `pico-x` → `haz.css` when touching img; floats OK for media wrap only. (2) Issue triage. Later: other theme’s shortcodes. *SimpleAndSmart* fork parked (~3–6h thin absorb) — **do not start until asked**. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).~~ Superseded 2026-10-02 — search modal polish PR open (core #80).
 - ~~**Next:** After search PR merges + FF `v1.x.x` + Pages: eyes-on search + **light mode**. Then (1) `haz_img` review + docs/blog ([#100](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/100)) — note `haz_img_*` width/float utils still sit in `pico-x` (same stranding class; port to `haz.css` when we touch img). (2) Issue triage. Later: other theme’s shortcodes. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).~~ Superseded 2026-10-02 — search live; light OK; Simple talk locked (aside/float + fork envelope).
 - ~~**Next:** (0) **Search modal** — F’d after ditch Pico; kit styles still in `pico-x` (not on OP+Simple stack). Diff vs HAZ.com / port into `simple-x` or `haz.css`. Also finish **light mode** eyes-on. Then (1) `haz_img` review + docs/blog draft ([#100](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/100)). (2) Issue triage. Later: other theme’s shortcodes. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).~~ Superseded 2026-10-02 — search ported to `haz.css` (PR); Simple stance locked.
 - ~~**Next:** (1) `haz_img` review + docs notes / blog post draft ([#100](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/100) posts/paging). (2) Issue triage — what to do / close / archive. Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).~~ Superseded 2026-10-01 night — search modal broke; fix first tomorrow.
@@ -334,6 +348,26 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 ---
 
 ## Meetings
+
+### 2026-10-05 (evening) — haz_img max_px / width_px / rwd wire
+
+- Locked names: `config.max_px`, `config.width_px`, `presets.*.rwd` (m/t/d, `w` = %). OP dogfood 479/767/1024.
+- Child `feat/haz-img-settings-shape`; core `feat/haz-img-max-px-width-px` — `fn_haz_img_variant_widths`, `fn_haz_img_band_resolve`, shortcode; `haz_img_*` CSS → `haz.css` @ 480/768; pico-x stub.
+- CSS OOTB bake talk after Pages eyes-on. Ship PRs next.
+
+### 2026-10-05 (midday) — haz_img settings reshape (paused)
+
+- Same job as before; smarter contract. Child branch `feat/haz-img-settings-shape` — settings only so far; shortcode still old Pico calc.
+- **Locked:** `config.up_to.m|t|d` (whole px) ties preset bands; `config.sizes` key→file px with `sm|md|lg` = those three; holes = `% ×` sm|md|lg. No gutter prop, no ladder multipliers, no `content_width`/`rem_px`/`content_width_px` in haz_img.
+- **OP dogfood stamps:** up_to **479 / 767 / 1024** (`--sm` / `--md` / `--size-lg` measure max). Two whens shifted down OP ladder; `d` is max not a BP. sizes xs…xxl: 240 / 479 / 767 / 1024 / 1536 / 2048.
+- Dropped confusing “spine from BP×gutter” runtime math; How To can still explain how you chose the numbers.
+- **Resume:** wire core shortcode + `fn_haz_img_*` to `up_to`/`sizes`; port CSS; helpers paths; ship. Mark out on errands.
+
+### 2026-10-02 (afternoon) — Search modal polish (staging → .com chrome)
+
+- Staging gaps vs haz.com: results `border-top` inset by modal `padding: 1rem`; close `align-self: flex-end` felt inset (Simple dialog chrome + fluid rem).
+- Fix in core `haz.css`: no side pad on modal (separator full-bleed); absolute corner close; gutters via `--haz_search_modal_pad_inline` on field/results. Preview inject: results inset 0; close ~5px from top/right.
+- PR: [core #80](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/80). After Mark merges → FF `v1.x.x` + Pages eyes-on. Then `haz_img`.
 
 ### 2026-10-02 (morning) — Simple talk: aside/float + fork envelope (docs only)
 
