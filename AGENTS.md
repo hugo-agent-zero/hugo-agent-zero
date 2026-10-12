@@ -40,6 +40,19 @@ Assistant replies: follow the **Assistant style (default)** section in [.agents/
 - Folder Atomics may include **`_preset_example.yaml`** — a non-loaded starter shape (like `.env.example`). Live presets are `preset_*.yaml` beside the Atomic and/or under `content/presets/`.
 - **sysMan first:** if composition can live in the graph (`order`, named slots, `inst` → multiplier), do it there. Do not bake `fn_multiplier` (or equivalent stacking) into an Atomic. Named slots on the Atomic; multiply in sysMan. Others may cheat; HAZ stays pure. One fill slot → **`content`** (match `tag_tag_wrapper`); several slots → role names (`col_brand`, `close_icon`).
 
+## Build it as an engineer
+
+Someone will read the markup. Write the thing you would let them judge.
+
+- **Plan the shape before the diff.** A new behavior, or a change to a blade, starts as a short plan: the markup, the attrs, where the CSS lives, where the JS lives, and what a second instance on the same page does. Do not discover those by coding. The finer points (ids, radio names, one loader, our names versus the library) are part of that plan. Speed that skips them is how a second mechanism lands.
+- **One job, one mechanism.** A flag turns a behavior on. It does not leave the old path in the page next to the new one.
+- **Our names in the markup.** Classes and shortcode attrs are HAZ words (`swipe`, `haz_do_tabs__bar`). The script is the only file that knows the library, and it maps our nodes onto that library.
+- **One loader.** Do not print a `<script>` per shortcode. The second copy that no-ops is still a copy. Behavior loads once, the way `script_embla` does.
+- **Rules live in the stylesheet.** A `<style>` block per instance is a missed selector. If two of the same blade can sit on one page, the rule is scoped by the group id from the stylesheet, or the markup is shaped so one rule covers every group. Do not generate a private rule per call.
+- **One parser.** A boolean attr is read in one helper. Do not paste the `true` / `1` / `yes` / `on` ladder into every blade.
+- **Open tags with `fn_tag_*`.** See **Markup construction**. A handwritten tag is not a local exception.
+- **When two rules fight, change the structure.** An override that only hides the fight does not ship.
+
 ## Atomic render boilerplate
 
 Every atom / molecule / organism **render entry** (file-based `*.html` or folder `index.html`) should follow the same shell. Reference (not loaded by Hugo): [.agents/boilerplate/_atomics.html](.agents/boilerplate/_atomics.html). Content FM masters in the same folder: [`_blog_single.md`](.agents/boilerplate/_blog_single.md), [`_page.md`](.agents/boilerplate/_page.md) — full prop catalogs with typical keys live and fringe keys `_`-parked for copy/paste. That folder is primarily for agents; humans can skim it via this section.
@@ -49,6 +62,15 @@ Every atom / molecule / organism **render entry** (file-based `*.html` or folder
 - **`else if enabled_false`:** `fn_partial` to the `enabled_false` child.
 - **Parents** under `helpers/parents/` are for shared **output** only. Do **not** put the enabled / comment / enabled_false gate in the parent — keep that on the Atomic index (e.g. `cols_two_tag_wrapper_000` → parent for markup).
 - **Organisms:** default to a **single file**. Use a **folder** only with a strong case (e.g. defaults + multiple presets such as `cols_two_tag_wrapper_000`). Not a hard ban — justify the folder.
+
+## Markup construction
+
+HAZ already has tools for opening tags. Use them. A second way to build the same element is how blades drift.
+
+- **Open tags** go through [`fn_tag_tag_open`](layouts/_partials/haz/helpers/fn/fn_tag_tag_open.html), or a tag-specific helper when one exists (`fn_tag_div_spacer`, `fn_tag_img`, `fn_tag_a_href_open`, and the other `fn_tag_*` files beside it). Pass attributes as a dict. `data-*` and `aria-*` go under `data` and `aria` maps, not as hand-written strings.
+- **Close** an element the helper leaves open with `print "</tag>" | safeHTML`.
+- **Do not** hand-write `<div class="{{ $class }}" …>` or interpolate optional attributes in the tag. That applies to Atomics, parents, and shortcode blades (`haz_do` included).
+- **Migrate as touched.** A blade you are already editing switches its tags in that pass. No separate sweep until one is asked for.
 
 ## CSS stack (live kit)
 
