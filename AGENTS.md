@@ -47,7 +47,7 @@ Someone will read the markup. Write the thing you would let them judge.
 - **Plan the shape before the diff.** A new behavior, or a change to a blade, starts as a short plan: the markup, the attrs, where the CSS lives, where the JS lives, and what a second instance on the same page does. Do not discover those by coding. The finer points (ids, radio names, one loader, our names versus the library) are part of that plan. Speed that skips them is how a second mechanism lands.
 - **One job, one mechanism.** A flag turns a behavior on. It does not leave the old path in the page next to the new one.
 - **Our names in the markup.** Classes and shortcode attrs are HAZ words (`swipe`, `haz_do_tabs__bar`). The script is the only file that knows the library, and it maps our nodes onto that library.
-- **One loader.** Do not print a `<script>` per shortcode. The second copy that no-ops is still a copy. Behavior loads once, the way `script_embla` does.
+- **One loader.** Do not print a `<script>` per shortcode. The second copy that no-ops is still a copy. Behavior loads once, the way `script_embla_init_000` does.
 - **Rules live in the stylesheet.** A `<style>` block per instance is a missed selector. If two of the same blade can sit on one page, the rule is scoped by the group id from the stylesheet, or the markup is shaped so one rule covers every group. Do not generate a private rule per call.
 - **One parser.** A boolean attr is read in one helper. Do not paste the `true` / `1` / `yes` / `on` ladder into every blade.
 - **Open tags with `fn_tag_*`.** See **Markup construction**. A handwritten tag is not a local exception.
