@@ -29,6 +29,8 @@ The shortcode does not invent layout math. It reads the child sysMan settings.
 
 A designer changes behavior by editing presets (or `width_px` / breakpoints), not by hand-writing `srcset` in the Markdown.
 
+Ultimately, what we want is to give the browser the largest image necessary without going over too much. That keeps the cumulative payload smaller, so the page loads faster.
+
 #### What ships
 
 The child ships a **bank** of presets: layout × crop, plus `as_is` and two alts.
