@@ -113,6 +113,15 @@ Prefer Hugo’s **native identifiers** in manifest `props`, `settings` keys, and
 
 When adding a feature, check [Hugo docs](https://gohugo.io/) for the canonical name before inventing a project alias.
 
+## Issues and PRs
+
+HQ issues are the inbox. The pull request opens on the repo that changed.
+
+1. **Issue first.** Do not start a solution until the HQ issue exists.
+2. **PR mentions the issue.** Title or body includes `hugo-agent-zero/hugo-agent-zero#N` so GitHub links both ways.
+3. **Issue mentions the PR.** Comment or body gets the PR URL.
+4. **Branch name carries the number** when we remember: `feat/37-short-slug`.
+
 ## Session carryover
 
 Chats can be lost after Cursor updates or new threads. [.agents/notes.md](.agents/notes.md) is the repo-backed **diary** (HQ is home; this SOT copy may lag).
