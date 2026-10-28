@@ -16,7 +16,7 @@ Do not invent HTML `srcset` by hand. Put the picture in the page bundle, point `
 
 - `name` (required) — key under `settings.haz_img.presets` in the child. The preset owns width (`w`: 25|33|50|67|75|100), `align` (left|center|right|none), and `ratio` (for example `16/9`). Empty ratio means as-is (no frame).
 - `lazy` (optional) — `false` skips `loading="lazy"` (heroes). Default comes from `settings.haz_img.config.default_lazy` (usually true).
-- `process` (optional) — `true` fills missing `width_px` stubs via Hugo `Resize` (width-only; aspect unchanged). Page-bundle stubs still win. Default is `settings.haz_img.config.process` (false). Quality knobs later.
+- `process` (optional) — fills missing `width_px` stubs via Hugo `Resize` (width-only; aspect unchanged). Page-bundle stubs still win. Default is `settings.haz_img.config.process` (true in the ship child). Quality knobs later.
 
 Inner content is the author’s HTML. The `src` stem must match page resources named with the `width_px` ladder (`_xs`, `_sm`, …). Sparse sets are fine. With `process=true`, a single master is enough — Hugo builds the missing rungs at build time.
 
