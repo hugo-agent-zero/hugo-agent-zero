@@ -113,6 +113,29 @@ Prefer Hugo’s **native identifiers** in manifest `props`, `settings` keys, and
 
 When adding a feature, check [Hugo docs](https://gohugo.io/) for the canonical name before inventing a project alias.
 
+## HAZ.com teach layers (benefits first, human → agent)
+
+Public site content and HQ catalogs are **different jobs**. Do not paste a catalog into a blog post and call it a How To.
+
+**Direction of travel (locked):** humans find HAZ.com, then think they should show it to their agent(s). Not the other way around.
+
+| Layer | Home | Job |
+|-------|------|-----|
+| **1 — Why** | HAZ.com How To / blog | Benefits in plain language. One job per piece. |
+| **2 — Do** | Same post or a short follow-on | Smallest recipe (paste this; 3–5 preset names). No settings tour unless asked. |
+| **3 — Deep** | [.agents/catalog/](.agents/catalog/) | Complete contract for agents (and humans who already care). |
+
+**Benefits gate:** every public How To must say why someone should care (two bullets is enough) before it earns a deep section. If you cannot clear that gate, do not publish yet.
+
+**`haz_img` benefits (use these words on HAZ.com):**
+
+1. **Automation** — adds `sizes` and `srcset` to HTML `<img>` tags so authors do not hand-write them.
+2. **Faster pages** — `sizes` + `srcset` let the browser choose a better file; smaller payload, faster loads.
+
+**Agent handoff:** end every How To with an explicit CTA to paste the post (or the catalog link) into an agent.
+
+**First real How To (when HAZ.com copy starts):** `haz_img` — benefits → recipe → deep/catalog link. Not a catalog paste. See [.agents/plans/haz_teach_layers_8994454b.plan.md](.agents/plans/haz_teach_layers_8994454b.plan.md). Cheatsheet ([#112](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/112)) is a map of names → one-liners, not a second catalog. Do **not** rewrite catalogs for Mom.
+
 ## Issues and PRs
 
 HQ issues are the inbox. The pull request opens on the repo that changed.

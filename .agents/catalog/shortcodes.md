@@ -1,5 +1,7 @@
 # HAZ Shortcodes
 
+**Layer 3 (deep).** Complete shortcode contract for agents and for humans who already care. Public How To posts on HAZ.com lead with **benefits** and a small recipe first — see **HAZ.com teach layers** in [AGENTS.md](../../AGENTS.md) and [plans/haz_teach_layers_8994454b.plan.md](../plans/haz_teach_layers_8994454b.plan.md). Do not paste this file into a blog post as the whole story.
+
 Product surface for people who paste shortcodes. Designers curate. Mom types the names she was given.
 
 ## Images
