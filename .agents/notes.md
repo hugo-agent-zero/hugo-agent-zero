@@ -37,7 +37,8 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 ### Now
 
 - **PR discipline (locked 2026-10-29):** **One feature → one complete PR set → Mark merges → then next.** No stacked 70/20/10 PR piles. No parallel HQ docs PRs on the same file.
-- **Next (when Mark back):** intentional **`haz_img` read-through review** (API moved a lot). Process / WebP / Mom knobs / `formats_allow` parked as `_formats_allow` — live + dogfood PASS. Close [#165](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/165) after review if clean. **#159** left open — HAZ.com sampler: hand-sized set + pipeline set. **#167** stays parked. Optional later: src polish, `fn_haz_bool` as-touched (#133), #156. Catalogs [#145](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/145)–[#153](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/153) after. Not [#119](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/119). [#161](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/161) / [#59](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/59) out of lane.
+- **Next (tomorrow):** (1) [#180](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/180) `shortcodes_blacklist` + `fn_check_shortcode_blacklist` (site-level; Mom shoots a blank; optional dev comment via `fn_html_comment` / [#179](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/179)). (2) Resume **`haz_img` scan** — it works; file non-fatal follow-ups as Issues, don’t sprawl fixes. Close [#165](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/165) if the scan stays clean. **#159** / **#167** parked. Catalogs later. Not [#119](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/119).
+- ~~**Next (when Mark back):** intentional **`haz_img` read-through review** …~~ Superseded 2026-10-29 EOD — preset_default + fail knobs shipped + dogfood PASS; blacklist tomorrow then scan.
 - ~~**Next:** Merge [core #132](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/132) … D-list `_formats_allow` wire? …~~ Superseded 2026-10-29 midday — #132/#59 merged; formats_allow dogfood + park shipped; review next when Mark back.
 - ~~**Next:** Merge haz_img Mom finish stack (order) → FF `v1.x.x` after each core → Pages eyes-on `/blog/haz-img-process/`. **Stage 1** … **HQ #172**.~~ Superseded 2026-10-29 — stacked PRs caused HQ conflicts; one-PR-at-a-time locked.
 - ~~**Next:** Merge [#165](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/165) pipeline WebP PRs → FF `v1.x.x` → Pages `/blog/haz-img-process/` (xs–md JPEG `_hu_`; lg+ WebP; `full_widescreen` lg q.webp 90 vs half at 75). **Then:** haz_img read-through review (API moved a lot in 24h). **Parked:** preset `enabled_false` + default key; #167 cache/Copy; src polish. Catalogs [#145](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/145)–[#153](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/153) after. Not [#119](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/119) this pass. [#161](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/161) reseter later. **[#59](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/59) later.** Do **not** merge [core #51](https://github.com/hugo-agent-zero/hugo-agent-zero-core/pull/51) / HQ [#80](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/80).~~ Superseded 2026-10-29 — WebP live; Mom finish PRs open.
@@ -371,6 +372,10 @@ Stable kit facts belong in root `AGENTS.md`. **Plans** (Plan-mode artifacts) liv
 ---
 
 ## Meetings
+
+### 2026-10-29 (EOD) — fail knobs dogfood; blacklist parked
+
+preset_default, lazy_default, src_404 / name_not_in_presets (`{ prod }`) shipped and eyes-on (ship + inverse). Name-miss comment via safeHTML. Ethos: site `shortcodes_blacklist` tomorrow ([#180](https://github.com/hugo-agent-zero/hugo-agent-zero/issues/180)), then haz_img scan + non-fatal Issues only. Stop the sprawl.
 
 ### 2026-10-29 — haz_img Mom finish; one PR at a time
 
