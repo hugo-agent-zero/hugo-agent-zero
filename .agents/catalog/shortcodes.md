@@ -14,7 +14,7 @@ Do not invent HTML `srcset` by hand. Put the picture in the page bundle, point `
 
 #### Attributes
 
-- `name` (required) — key under `settings.haz_img.presets` in the child. The preset owns width (`w`: 25|33|50|67|75|100), `align` (left|center|right|none), and `ratio` (for example `16/9`). Empty ratio means as-is (no frame).
+- `name` (required) — key under `settings.haz_img.presets` in the child. The preset owns width (`w`: 25|33|50|67|75|100), `align` (left|center|right|none), and `ratio` (for example `16/9`). Empty ratio means as-is (no frame). Preset `enabled` omit/true = on; only `false` turns it off. When off, `enabled_false` is another preset key resolved as if Mom called that name (missing target / cycle → same as bad `name`).
 - `lazy` (optional) — `false` skips `loading="lazy"` (heroes). Default comes from `settings.haz_img.config.default_lazy` (usually true).
 - `process` (optional) — fills missing `rwd_widths` stubs via Hugo `Resize` (width-only; aspect unchanged). Page-bundle stubs still win as written. Default is `settings.haz_img.config.process` (true in the ship child). Per rung: `format` must be in core’s baked allowlist (`jpeg`|`webp`|`avif`|`png`; `jpg`→`jpeg`); anything else → `inherit` (same as master). Quality from `q.{format}` (`1`–`100` on Resize; `-1`/omit = Hugo imaging default). Presets may layer the same fields. Mom only picks `name=`.
 
@@ -28,8 +28,8 @@ The shortcode does not invent layout math. It reads the child sysMan settings.
 2. **`settings.haz_img.config.rwd_widths`** — HAZ ladder defaults for `srcset` + process (`px`, `format`, `q`). Not the layout width. Looks for `photo_xs.jpg`, … next to the page. Process `format` allowlist is baked in core (`jpeg`|`webp`|`avif`|`png`). Ship dogfood: `xs`/`sm`/`md` `inherit`; `lg`+ `webp`. Bare ints still work (`lg: 1024` → inherit, Hugo default quality).
 3. **`settings.haz_img.config._formats_allow`** — parked FYI. Lists every Hugo Resize format; nothing reads it. Future: could override core’s baked list with more or fewer entries.
 4. **`settings.haz_img.config.default_lazy`** — default for `loading="lazy"` when the shortcode omits `lazy`.
-5. **`settings.haz_img.presets.{name}`** — the named layout. `rwd.m` / `t` / `d` each may set `w`, `align`, and `ratio`. Omit a band or field and the band above is inherited (`t` from `m`, `d` from `t`). Optional `presets.*.rwd_widths` is that preset’s layer on HAZ defaults (only fields set — e.g. bump `lg.q.webp` for a headshot).
-6. **Build** — resolve the preset → CSS classes (`haz_img_m50`, `haz_img_m_left`, …) → `sizes` holes (file width × `w%` at each breakpoint) → `srcset` from page resources (or process Resize, maybe WebP per rung) → optional frame (`haz_img_frame` + `--haz_img_ratio_*`) when any band has a ratio. Framed images prefix `sizes` with `auto`. As-is does not. `src` stays the master.
+5. **`settings.haz_img.presets.{name}`** — the named layout. `enabled` / `enabled_false` soft-off + redirect (see Attributes). `rwd.m` / `t` / `d` each may set `w`, `align`, and `ratio`. Omit a band or field and the band above is inherited (`t` from `m`, `d` from `t`). Optional `presets.*.rwd_widths` is that preset’s layer on HAZ defaults (only fields set — e.g. bump `lg.q.webp` for a headshot).
+6. **Build** — resolve the preset (including enabled redirect) → CSS classes (`haz_img_m50`, `haz_img_m_left`, …) → `sizes` holes (file width × `w%` at each breakpoint) → `srcset` from page resources (or process Resize, maybe WebP per rung) → optional frame (`haz_img_frame` + `--haz_img_ratio_*`) when any band has a ratio. Framed images prefix `sizes` with `auto`. As-is does not. `src` stays the master.
 
 A designer changes behavior by editing presets (or `rwd_widths` / breakpoints), not by hand-writing `srcset` in the Markdown.
 
